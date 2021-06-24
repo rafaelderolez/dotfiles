@@ -45,3 +45,5 @@ eval "$(starship init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+export PATH=/opt/homebrew/bin:$PATH
