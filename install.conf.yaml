@@ -15,6 +15,7 @@
 - link:
     ~/.zshrc: zsh/zshrc
     ~/.zshenv: zsh/zshenv
+    ~/.zprofile: zsh/zprofile
     ~/.antigen.zsh: zsh/antigen.zsh
 
 - shell:
