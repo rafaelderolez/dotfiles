@@ -1,0 +1,27 @@
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/mkdir -p ~/Library/Caches/Homebrew
+mkdir -p ~/Library/Caches/Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+open ~/Library/Caches/Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"\
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo chown -R $(whoami) /usr/local
+sudo chown -R $(whoami) ~/Library/Caches/Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo chown -R $(whoami) /Library/Caches/Homebrew
+sudo chown -R $(whoami) ~/Library/Caches/Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/mkdir -p ~/Library/Caches/Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+whoami
+/usr/bin/sudo /usr/sbin/chown -R raf:admin /opt/homebrew
+/usr/bin/sudo /bin/mkdir -p ~/Library/Caches/Homebrew\
+
+whoami
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/
+csrutil status
+csrutil disable
+cd dotfiles/
+zsh

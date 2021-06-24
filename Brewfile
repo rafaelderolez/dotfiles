@@ -45,6 +45,7 @@ brew "yarn"
 brew "youtube-dl"
 brew "zoxide"
 
+cask "1password"
 cask "airpass"
 cask "alfred"
 cask "amethyst"
