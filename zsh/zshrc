@@ -1,0 +1,47 @@
+
+# ================================================================================ #
+# Config
+# ================================================================================ #
+
+# Allow insecure directories
+ZSH_DISABLE_COMPFIX=true
+# Disable update prompts
+DISABLE_UPDATE_PROMPT=true
+# Auto-update frequency in days
+UPDATE_ZSH_DAYS=30
+# Brew prefix
+BREW_PREFIX=$(dirname $(dirname $(which brew)))
+# Case insensitve autocomplete
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# Turn on correction suggestions
+unsetopt correct_all
+setopt correct
+# Turn on 256color support
+TERM=xterm-256color
+
+# ================================================================================ #
+# Startup
+# ================================================================================ #
+
+# Antigen
+source ~/.antigen.zsh
+
+antigen bundle Aloxaf/fzf-tab
+antigen bundle MichaelAquilina/zsh-you-should-use
+antigen bundle nvm
+antigen bundle reegnz/jq-zsh-plugin
+antigen bundle sudo
+antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
+
+# NVM plugin settings
+NVM_LAZY=1
+NVM_AUTOLOAD=1
+
+# Starship
+eval "$(starship init zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"

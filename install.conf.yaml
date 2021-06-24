@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      relink: true
+
+    brewfile:
+      stdout: true
+      stderr: true
+      include: ["tap", "brew", "cask", "mas"]
+
+- brewfile:
+    file: Brewfile
+
+- clean: ["~"]
+
+- link:
+    ~/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
+    ~/.antigen.zsh: zsh/antigen.zsh
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
