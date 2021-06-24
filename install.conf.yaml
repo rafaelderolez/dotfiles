@@ -7,9 +7,6 @@
       stderr: true
       include: ["tap", "brew", "cask", "mas"]
 
-- brewfile:
-    file: Brewfile
-
 - clean: ["~"]
 
 - link:
@@ -17,6 +14,9 @@
     ~/.zshenv: zsh/zshenv
     ~/.zprofile: zsh/zprofile
     ~/antigen.zsh: zsh/antigen.zsh
+
+- brewfile:
+    file: Brewfile
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
