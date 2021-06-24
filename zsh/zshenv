@@ -1,6 +1,5 @@
-export HOME="~"
 export DOTFILES=$HOME/.dotfiles
 export ZDOTDIR=$HOME
 export CLOUD_SYNC="$HOME/Google Drive"
 export EDITOR="code -w"
-export HOMEBREW_BREWFILE=~/.brewfile
+export HOMEBREW_BREWFILE=$HOME/.brewfile
