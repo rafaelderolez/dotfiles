@@ -27,7 +27,7 @@ on_start() {
  ░
 
 EOF
-	alt "Prepare for automation heaven..."
+  echo "Prepare for automation heaven..."
 	sudo -v
 }
 
@@ -35,7 +35,7 @@ EOF
 install_homebrew() {
 	# Check for Homebrew and install if it doesn't exist
 	if test ! $(which brew); then
-		info "Installing Homebrew"
+		echo "Installing Homebrew"
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 		# Install all dependencies in Brewfile
 	fi
@@ -52,8 +52,8 @@ install_homebrew_dependencies() {
 	echo "Homebrew bundle installed"
 }
 
-
 main() {
+  on_start
 	install_homebrew
 	install_homebrew_dependencies
 }
