@@ -69,6 +69,6 @@ cask "visual-studio-code"
 cask "whatsapp"
 cask "zoom"
 
-mas install 497799835 # Xcode
-mas install 688211836 # EasyRes
-mas install 937984704 # Amphetamine
+mas "Xcode", id: 497799835
+mas "EasyRes", id: 688211836 
+mas "Amphetamine", id: 937984704 
