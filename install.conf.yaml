@@ -10,6 +10,7 @@
 - clean: ["~"]
 
 - link:
+    ~/.gitconfig: gitconfig
     ~/.zshrc: zsh/zshrc
     ~/.zshenv: zsh/zshenv
     ~/.zprofile: zsh/zprofile
