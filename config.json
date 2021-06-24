@@ -1,0 +1,64 @@
+{
+  "dockFolders": [
+    {
+      "name": "Desktop",
+      "view": "grid",
+      "sort": "name",
+      "icon": "desktop.icns"
+    },
+    {
+      "name": "Downloads",
+      "view": "grid",
+      "sort": "dateadded",
+      "icon": "downloads.icns"
+    }
+  ],
+  "fileAssociations": [
+    {
+      "application": "VS Code",
+      "bundleId": "com.microsoft.VSCode",
+      "extensions": [
+        ".css",
+        ".js",
+        ".jsx",
+        ".json",
+        ".md",
+        ".plist",
+        ".py",
+        ".rb",
+        ".scss",
+        ".sh",
+        ".swift",
+        ".toml",
+        ".xml",
+        ".yaml",
+        ".yml"
+      ]
+    },
+    {
+      "application": "VLC",
+      "bundleId": "org.videolan.vlc",
+      "extensions": [
+        ".mp4",
+        ".webm",
+        ".mkv",
+        ".avi",
+        ".mov",
+        ".wmv",
+        ".mpg",
+        ".mpeg",
+        ".m4v"
+      ]
+    }
+  ],
+  "dock": [
+    "Brave Browser",
+    "Visual Studio Code",
+    "Figma",
+    "Slack",
+    "zoom.us",
+    "Signal",
+    "WhatsApp",
+    "Spotify"
+  ]
+}
