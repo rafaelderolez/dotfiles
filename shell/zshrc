@@ -24,7 +24,7 @@ TERM=xterm-256color
 # ================================================================================ #
 
 # Antigen
-source $(brew --prefix)/share/antigen.zsh
+source $(brew --prefix)/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
 # NVM plugin settings
