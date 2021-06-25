@@ -25,16 +25,7 @@ TERM=xterm-256color
 
 # Antigen
 source ~/antigen.zsh
-
-antigen bundle Aloxaf/fzf-tab
-antigen bundle MichaelAquilina/zsh-you-should-use
-antigen bundle nvm
-antigen bundle reegnz/jq-zsh-plugin
-antigen bundle sudo
-antigen bundle zdharma/fast-syntax-highlighting
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-antigen apply
+antigen init ~/.antigenrc
 
 # NVM plugin settings
 NVM_LAZY=1
@@ -45,5 +36,3 @@ eval "$(starship init zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
-
-export PATH=/opt/homebrew/bin:$PATH

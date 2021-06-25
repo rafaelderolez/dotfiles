@@ -11,10 +11,10 @@
 
 - link:
     ~/.gitconfig: gitconfig
-    ~/.zshrc: zsh/zshrc
-    ~/.zshenv: zsh/zshenv
-    ~/.zprofile: zsh/zprofile
-    ~/antigen.zsh: zsh/antigen.zsh
+    ~/.zshrc: shell/zshrc
+    ~/.zshenv: shell/zshenv
+    ~/.zprofile: shell/zprofile
+    ~/.antigenrc: shell/antigenrc
 
 - brewfile:
     file: Brewfile
