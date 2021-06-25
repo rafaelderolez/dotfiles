@@ -42,20 +42,9 @@ install_homebrew() {
 	echo "Homebrew installed"
 }
 
-install_homebrew_dependencies() {
-	echo "Installing dependencies from Brewfile"	
-  open -a "App Store.app"
-  echo "Login to the App Store to continue"
-
-	# Install everything in Brewfile
-	brew bundle --no-upgrade --file ./Brewfile
-	echo "Homebrew bundle installed"
-}
-
 main() {
   on_start
 	install_homebrew
-	install_homebrew_dependencies
 }
 
 main
