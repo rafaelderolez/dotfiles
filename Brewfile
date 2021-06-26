@@ -1,10 +1,11 @@
-tap "fwartner/mac-cleanup"
+# tap "fwartner/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "isacikgoz/taps"
 tap "vitorgalvao/tiny-scripts"
 
+# brew "fwartner/tap/mac-cleanup"
 brew "antigen"
 brew "coreutils"
 brew "curl"

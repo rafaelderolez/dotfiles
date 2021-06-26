@@ -23,6 +23,10 @@ TERM=xterm-256color
 # Startup
 # ================================================================================ #
 
+# ZSH
+source $DOTFILES/shell/alias.zsh
+source $DOTFILES/shell/exports.zsh
+
 # Antigen
 source $(brew --prefix)/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
