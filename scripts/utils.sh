@@ -38,7 +38,6 @@ alt() {
 }
 
 info() {
-  echo
   log "${BLUE}${BOLD}%s:${NORMAL}${RESET} \n" "$@"
 }
 

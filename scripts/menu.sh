@@ -6,12 +6,12 @@ function menu() {
     install)
         $DOTFILES/install
         ;;
-    # clean)
-    #     info "Cleaning up your system with cleanup"
-    #     alt "Read more about what it does https://git.io/JtiTr"
-    #     cleanup -n
-    #     success "Cleaning complete!"
-    #     ;;
+    ssh)
+        sh $DOTFILES/scripts/ssh.sh
+        ;;
+    npm)
+        sh $DOTFILES/scripts/node_modules.sh
+        ;;
     dock)
         sh $DOTFILES/scripts/dock.sh
         ;;
@@ -29,9 +29,10 @@ function menu() {
         echo "Usage: dot <command>"
         echo
         echo "Commands:"
-        # echo "   ${MAGENTA}clean${RESET}            Runs system cleanup"
         echo "   ${MAGENTA}install${RESET}          Bootstraps your system"
-        echo "   ${MAGENTA}dock${RESET}             Setup dock items"
+        echo "   ${MAGENTA}ssh${RESET}              Set up ssh"
+        echo "   ${MAGENTA}npm${RESET}              Install node modules"
+        echo "   ${MAGENTA}dock${RESET}             Set up dock items"
         echo "   ${MAGENTA}duti${RESET}             Assign default applications for document types"
         echo "   ${MAGENTA}edit${RESET}             Open dotfiles in editor"
         echo "   ${MAGENTA}help${RESET}             This help message"
@@ -43,9 +44,6 @@ function menu() {
         ;;
     update)
         sh ${DOTFILES}/scripts/update.sh
-        ;;
-    *)
-        menu help
         ;;
     esac
 }

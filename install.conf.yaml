@@ -15,9 +15,14 @@
     ~/.zshenv: shell/zshenv
     ~/.zprofile: shell/zprofile
     ~/.antigenrc: shell/antigenrc
-
-- brewfile:
-    file: Brewfile
+    ~/.brewfile: packages/brewfile
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - command: ./init.sh
+      stdin: true
+      stdout: true
+      description: Here we go again
+
+- brewfile:
+    file: packages/Brewfile

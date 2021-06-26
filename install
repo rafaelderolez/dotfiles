@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ${DOTFILES}/init.sh
+
 set -e
 
 CONFIG="install.conf.yaml"

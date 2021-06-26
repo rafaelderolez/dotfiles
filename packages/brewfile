@@ -42,7 +42,6 @@ brew "vitorgalvao/tiny-scripts/calm-notifications"
 brew "webp"
 brew "wget"
 brew "yank"
-brew "yarn"
 brew "youtube-dl"
 brew "zoxide"
 
