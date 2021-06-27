@@ -18,11 +18,27 @@
     ~/.brewfile: packages/brewfile
 
 - shell:
+    - command: sh scripts/cj.sh
+      stdout: true
     - [git submodule update --init --recursive, Installing submodules]
-    - command: ./init.sh
+    - command: sh scripts/ssh.sh
       stdin: true
       stdout: true
-      description: Here we go again
+      description: Set up SSH key
+    - command: sh scripts/homebrew.sh
+      stdin: true
+      stdout: true
+      description: Homebrew
+    - command: exec zsh
+      description: Reload shell
+    - command: sh scripts/node_modules.sh
+      stdin: true
+      stdout: true
+      description: NPM
+    - command: sh scripts/dock.sh
+      stdin: true
+      stdout: true
+      description: Dock
 
 - brewfile:
     file: packages/Brewfile

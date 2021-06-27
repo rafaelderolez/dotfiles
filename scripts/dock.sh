@@ -35,7 +35,7 @@ add_folders() {
     process "Adding folder $name"
     dockutil --add "$HOME/$name" --view $view --display folder --sort $sort --no-restart
     process "Setting $name icon"
-    # fileicon -q set "$HOME/$name" "$DOTFILES/icons/$icon"
+    fileicon -q set "$HOME/$name" "$DOTFILES/icons/$icon"
   done <<EOF
 $(jq -c '.dockFolders[]' <"$DOTFILES/config.json")
 EOF
