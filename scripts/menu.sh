@@ -24,7 +24,6 @@ function menu() {
     help)
         echo
         echo "${CYAN}${BOLD}DOTFILES${NORMAL}${RESET}"
-        echo "Manage your system like a boss"
         echo
         echo "Usage: dot <command>"
         echo
