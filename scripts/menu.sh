@@ -10,7 +10,7 @@ function menu() {
         sh $DOTFILES/scripts/ssh.sh
         ;;
     npm)
-        sh $DOTFILES/scripts/node_modules.sh
+        sh $DOTFILES/scripts/npm.sh
         ;;
     dock)
         sh $DOTFILES/scripts/dock.sh
@@ -29,21 +29,23 @@ function menu() {
         echo "Usage: dot <command>"
         echo
         echo "Commands:"
-        echo "   ${MAGENTA}install${RESET}          Bootstraps your system"
+        echo "   ${MAGENTA}install${RESET}          Run dotbot to run through the whole flow"
         echo "   ${MAGENTA}ssh${RESET}              Set up ssh"
         echo "   ${MAGENTA}npm${RESET}              Install node modules"
         echo "   ${MAGENTA}dock${RESET}             Set up dock items"
         echo "   ${MAGENTA}duti${RESET}             Assign default applications for document types"
         echo "   ${MAGENTA}edit${RESET}             Open dotfiles in editor"
-        echo "   ${MAGENTA}help${RESET}             This help message"
-        echo "   ${MAGENTA}macos${RESET}            Apply macOS preferences"
         echo "   ${MAGENTA}update${RESET}           Update packages and package managers"
+        echo "   ${MAGENTA}help${RESET}             This help message"
         ;;
     macos)
         sh $DOTFILES/scripts/macos.sh
         ;;
     update)
         sh ${DOTFILES}/scripts/update.sh
+        ;;
+    *)
+        menu help
         ;;
     esac
 }
