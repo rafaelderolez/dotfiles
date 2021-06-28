@@ -13,6 +13,7 @@
     ~/.zshrc: shell/zshrc
     ~/.zshenv: shell/zshenv
     ~/.zprofile: shell/zprofile
+    ~/.hushlogin: shell/hushlogin
     ~/.antigenrc: shell/antigenrc
     ~/.brewfile: packages/brewfile
     ~/.gitconfig: configs/gitconfig
