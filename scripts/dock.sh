@@ -21,7 +21,7 @@ add_apps() {
     process "Adding application $name"
     dockutil --add "/Applications/$name.app" --no-restart
   done <<EOF
-$(jq -c '.dock[]' <"$DOTFILES/settings/config.json")
+$(jq -c '.dock[]' <"$DOTFILES/configs/config.json")
 EOF
 }
 
@@ -32,12 +32,13 @@ add_folders() {
     local view=$(jq -r '.view' <<<"$folder")
     local sort=$(jq -r '.sort' <<<"$folder")
     local icon=$(jq -r '.icon' <<<"$folder")
+    local display=$(jq -r '.display' <<<"$folder")
     process "Adding folder $name"
-    dockutil --add "$HOME/$name" --view $view --display folder --sort $sort --no-restart
+    dockutil --add "$HOME/$name" --view $view --display $display --sort $sort --no-restart
     process "Setting $name icon"
     fileicon -q set "$HOME/$name" "$DOTFILES/icons/$icon"
   done <<EOF
-$(jq -c '.dockFolders[]' <"$DOTFILES/settings/config.json")
+$(jq -c '.dockFolders[]' <"$DOTFILES/configs/config.json")
 EOF
 }
 

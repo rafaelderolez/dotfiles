@@ -15,7 +15,7 @@
     ~/.zprofile: shell/zprofile
     ~/.antigenrc: shell/antigenrc
     ~/.brewfile: packages/brewfile
-    ~/.gitconfig: settings/gitconfig
+    ~/.gitconfig: configs/gitconfig
 
 - shell:
     - command: sh scripts/cj.sh

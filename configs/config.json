@@ -3,12 +3,14 @@
     {
       "name": "Desktop",
       "view": "grid",
+      "display": "folder",
       "sort": "name",
       "icon": "desktop.icns"
     },
     {
       "name": "Downloads",
       "view": "grid",
+      "display": "folder",
       "sort": "dateadded",
       "icon": "downloads.icns"
     }
