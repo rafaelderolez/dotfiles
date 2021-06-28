@@ -2,11 +2,11 @@
 # Aliases
 # ================================================================================ #
 
-alias C="cd '$CLOUD_SYNC'"
+alias CL="cd '$CLOUD_SYNC'"
 alias D="cd $DOTFILES"
 alias DL="cd $HOME/Downloads"
 alias H="cd $HOME"
-alias P="cd $HOME/Projects"
+alias C="cd $HOME/Code"
 
 alias ci="brew install --cask $1"
 alias cu="brew uninstall --cask $1"
