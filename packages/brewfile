@@ -72,6 +72,6 @@ cask "visual-studio-code"
 cask "whatsapp"
 cask "zoom"
 
-mas "Xcode", id: 497799835
+mas "Xcode", id: 97799835
 mas "EasyRes", id: 688211836 
-mas "Amphetamine", id: 937984704 
+mas "Spark", id: 1176895641
