@@ -1,0 +1,15 @@
+[user]
+	email = raf@derolez.dev
+	name = Rafael Derolez
+[core]
+	excludesfile = ~/.gitignore
+[push]
+	default = simple
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
+[rebase]
+	autoStash = true
+[pull]
+	rebase = true

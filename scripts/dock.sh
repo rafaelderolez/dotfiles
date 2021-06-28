@@ -21,7 +21,7 @@ add_apps() {
     process "Adding application $name"
     dockutil --add "/Applications/$name.app" --no-restart
   done <<EOF
-$(jq -c '.dock[]' <"$DOTFILES/config.json")
+$(jq -c '.dock[]' <"$DOTFILES/settings/config.json")
 EOF
 }
 
@@ -37,7 +37,7 @@ add_folders() {
     process "Setting $name icon"
     fileicon -q set "$HOME/$name" "$DOTFILES/icons/$icon"
   done <<EOF
-$(jq -c '.dockFolders[]' <"$DOTFILES/config.json")
+$(jq -c '.dockFolders[]' <"$DOTFILES/settings/config.json")
 EOF
 }
 

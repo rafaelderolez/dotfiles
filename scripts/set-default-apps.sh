@@ -11,7 +11,7 @@ source ${DOTFILES}/scripts/utils.sh
 
 set_associations() {
   info "Setting default applications for file types"
-  jq -c '.fileAssociations[]' $DOTFILES/config.json |
+  jq -c '.fileAssociations[]' $DOTFILES/settings/config.json |
     while read associations; do
       local application=$(jq -r '.application' <<<"$associations")
       local bundleId=$(jq -r '.bundleId' <<<"$associations")
