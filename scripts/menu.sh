@@ -35,6 +35,7 @@ function menu() {
         echo "   ${MAGENTA}duti${RESET}             Assign default applications for document types"
         echo "   ${MAGENTA}edit${RESET}             Open dotfiles in editor"
         echo "   ${MAGENTA}update${RESET}           Update packages and package managers"
+        echo "   ${MAGENTA}agents${RESET}           Symlink and reload launch agents"
         echo "   ${MAGENTA}help${RESET}             This help message"
         ;;
     macos)
@@ -42,6 +43,9 @@ function menu() {
         ;;
     update)
         sh ${DOTFILES}/scripts/update.sh
+        ;;
+    agents)
+        sh ${DOTFILES}/scripts/launch-agents.sh
         ;;
     *)
         menu help

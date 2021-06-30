@@ -42,6 +42,11 @@
       stdout: true
       description: NPM
 
+    - command: sh scripts/launch-agents.sh
+      stdin: true
+      stdout: true
+      description: Launch Agents
+
     - command: sh scripts/dock.sh
       stdin: true
       stdout: true
