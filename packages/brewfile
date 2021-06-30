@@ -73,5 +73,4 @@ cask "whatsapp"
 cask "zoom"
 
 mas "Xcode", id: 97799835
-mas "EasyRes", id: 688211836 
 mas "Spark", id: 1176895641
