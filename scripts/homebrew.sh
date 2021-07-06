@@ -8,3 +8,5 @@ install_homebrew() {
 	fi
 	success "Homebrew installed"
 }
+
+install_homebrew
