@@ -17,6 +17,7 @@
     ~/.antigenrc: shell/antigenrc
     ~/.brewfile: packages/brewfile
     ~/.gitconfig: configs/gitconfig
+    ~/.gitignore: configs/gitignore
 
 - shell:
     - command: sh scripts/cj.sh
