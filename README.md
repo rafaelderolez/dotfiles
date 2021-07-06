@@ -2,7 +2,7 @@
 
 ## Installation
 ```bash
-git clone git@github.com:rafaelderolez/dotfiles.git .dotfiles && cd .dotfiles && ./install
+git clone https://github.com/rafaelderolez/dotfiles.git .dotfiles && cd .dotfiles && ./install
 ```
 
 ## Features
