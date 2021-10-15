@@ -15,9 +15,9 @@
     ~/.zprofile: shell/zprofile
     ~/.hushlogin: shell/hushlogin
     ~/.antigenrc: shell/antigenrc
-    ~/.brewfile: packages/brewfile
-    ~/.gitconfig: configs/gitconfig
-    ~/.gitignore: configs/gitignore
+    ~/.gitconfig: gitfiles/gitconfig
+    ~/.gitignore: gitfiles/gitignore
+    ~/.config: config
 
 - shell:
     - command: sh scripts/cj.sh
@@ -54,4 +54,4 @@
       description: Dock
 
 - brewfile:
-    file: packages/Brewfile
+    file: packages/brewfile
