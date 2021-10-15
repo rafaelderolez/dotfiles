@@ -4,7 +4,7 @@
 # ================================================================================ #
 
 # Editor
-export EDITOR="code"
+export EDITOR="nvim"
 # Disable Homebrew lock file
 export HOMEBREW_BUNDLE_NO_LOCK=true
 # Auto load or install required node version in .nvmrc
