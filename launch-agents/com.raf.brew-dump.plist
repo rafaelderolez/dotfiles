@@ -1,0 +1,31 @@
+<!-- Dump the Homebrew Bundle file every time something is installed/uninstalled -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.raf.brew-dump.plist</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string>/usr/local/sbin:/usr/bin:/bin:/usr/local/bin</string>
+    </dict>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/zsh</string>
+      <string>-c</string>
+      <string>exec brew bundle dump --file=$DOTFILES/packages/Brewfile --force</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+      <key>Hour</key>
+      <intege>05</integer>
+      <key>Minute</key>
+      <integer>00</integer>
+    </dict>
+    <key>StandardErrorPath</key>
+    <string>/tmp/com.raf.brew-dump.err</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/com.raf.brew-dump.out</string>
+  </dict>
+</plist>

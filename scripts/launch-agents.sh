@@ -14,14 +14,10 @@ source ${DOTFILES}/scripts/utils.sh
 dotfile_launch_agents=$DOTFILES/launch-agents
 system_launch_agents=$HOME/Library/LaunchAgents
 
-info "Symlinking all files in subdirectories to $system_launch_agents"
-for dir in $dotfile_launch_agents/*; do
-  symlink_dir_files "$dir" "$system_launch_agents"
-  echo
-done
+symlink_dir_files "$dotfile_launch_agents" "$system_launch_agents"
 
 info "Loading Launch Agents"
-for file in $dotfile_launch_agents/**/*; do
+for file in $dotfile_launch_agents/*.plist; do
   filename=$(basename "$file")
   path="$HOME/Library/LaunchAgents/$filename"
   
@@ -31,7 +27,7 @@ for file in $dotfile_launch_agents/**/*; do
   fi
 
   launchctl load $path
-  success "Loading $filename"
+  success "Loading $path"
 done
 
 echo
