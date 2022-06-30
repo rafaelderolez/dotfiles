@@ -14,7 +14,7 @@
     <array>
       <string>/bin/zsh</string>
       <string>-c</string>
-      <string>exec brew bundle dump --file=$DOTFILES/packages/Brewfile --force</string>
+      <string>exec brew bundle dump --file=$DOTFILES/packages/brewfile --force</string>
     </array>
     <key>StartCalendarInterval</key>
     <dict>
