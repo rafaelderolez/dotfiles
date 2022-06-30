@@ -8,8 +8,6 @@ alias DL="cd $HOME/Downloads"
 alias H="cd $HOME"
 alias C="cd $HOME/Code"
 
-alias ci="brew install --cask $1"
-alias cu="brew uninstall --cask $1"
 alias dot="$DOTFILES/scripts/menu.sh"
 alias ls="exa --icons --tree -L 1 --group-directories-first"
 alias mv="mv -v"
