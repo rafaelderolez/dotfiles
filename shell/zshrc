@@ -25,22 +25,17 @@ source $DOTFILES/shell/functions.zsh
 source $(brew --prefix)/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
-# NVM plugin settings
-export NVM_LAZY_LOAD=1
-export NVM_COMPLETION=true
 
-# Starship
-
+# Prompt
 if [ $TERM_PROGRAM != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh)"
+  eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/1_shell.omp.json')"
+
 fi
 
 precmd_functions+=(set_win_title)
 
 # Zoxide
 eval "$(zoxide init zsh)"
-alias luamake=/Users/raf/.config/nvim/lua-language-server/3rd/luamake/luamake
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.local/bin"
 
