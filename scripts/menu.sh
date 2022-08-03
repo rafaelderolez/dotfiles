@@ -15,9 +15,6 @@ function menu() {
     dock)
         sh $DOTFILES/scripts/dock.sh
         ;;
-    duti)
-        sh $DOTFILES/scripts/set-default-apps.sh
-        ;;
     edit)
         cd $DOTFILES && $EDITOR .
         ;;
@@ -32,14 +29,10 @@ function menu() {
         echo "   ${MAGENTA}ssh${RESET}              Set up ssh"
         echo "   ${MAGENTA}npm${RESET}              Install node modules"
         echo "   ${MAGENTA}dock${RESET}             Set up dock items"
-        echo "   ${MAGENTA}duti${RESET}             Assign default applications for document types"
         echo "   ${MAGENTA}edit${RESET}             Open dotfiles in editor"
         echo "   ${MAGENTA}update${RESET}           Update packages and package managers"
         echo "   ${MAGENTA}agents${RESET}           Symlink and reload launch agents"
         echo "   ${MAGENTA}help${RESET}             This help message"
-        ;;
-    macos)
-        sh $DOTFILES/scripts/macos.sh
         ;;
     update)
         sh ${DOTFILES}/scripts/update.sh

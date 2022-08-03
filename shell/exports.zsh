@@ -11,3 +11,5 @@ export HOMEBREW_BUNDLE_NO_LOCK=true
 export NVM_AUTO_USE=true
 # Visual editor
 export VISUAL="$EDITOR --wait"
+# NPM TOKEN (Timeline)
+export NPM_TOKEN=c3875fbb-df19-426b-895a-7a40e5cf8b3d
