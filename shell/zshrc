@@ -1,14 +1,7 @@
-
 # ================================================================================ #
 # Config
 # ================================================================================ #
 
-# Allow insecure directories
-ZSH_DISABLE_COMPFIX=true
-# Disable update prompts
-DISABLE_UPDATE_PROMPT=true
-# Auto-update frequency in days
-UPDATE_ZSH_DAYS=30
 # Brew prefix
 BREW_PREFIX=$(dirname $(dirname $(which brew)))
 # Case insensitve autocomplete
@@ -37,7 +30,17 @@ export NVM_LAZY_LOAD=1
 export NVM_COMPLETION=true
 
 # Starship
-eval "$(starship init zsh)"
+
+if [ $TERM_PROGRAM != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
+
+precmd_functions+=(set_win_title)
 
 # Zoxide
 eval "$(zoxide init zsh)"
+alias luamake=/Users/raf/.config/nvim/lua-language-server/3rd/luamake/luamake
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.local/bin"
+
