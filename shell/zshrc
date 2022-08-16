@@ -20,16 +20,15 @@ TERM=xterm-256color
 source $DOTFILES/shell/alias.zsh
 source $DOTFILES/shell/exports.zsh
 source $DOTFILES/shell/functions.zsh
+source $DOTFILES/shell/secrets.zsh
 
 # Antigen
 source $(brew --prefix)/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
-
 # Prompt
 if [ $TERM_PROGRAM != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/1_shell.omp.json')"
-
 fi
 
 precmd_functions+=(set_win_title)
