@@ -1,8 +1,7 @@
 antigen bundle Aloxaf/fzf-tab
 antigen bundle MichaelAquilina/zsh-you-should-use
-antigen bundle reegnz/jq-zsh-plugin
-antigen bundle sudo
 antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle lukechilds/zsh-nvm
 
 antigen apply
