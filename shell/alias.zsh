@@ -17,3 +17,32 @@ alias rm="trash"
 alias fast="fast --upload"
 alias squoosh="squoosh-cli"
 alias zperf="/usr/bin/time zsh -i -c exit"
+
+
+# npm
+alias ni="npm install"
+alias nid="npm install --save-dev"
+alias nig="npm install -g"
+alias nr="npm run-script"
+alias nt="npm test"
+alias nit="npm install && npm test"
+alias nis="npm install && npm start"
+alias nits="npm install && npm test && npm start"
+alias ns="npm start"
+alias nl="npm link"
+alias nw="npm run watch"
+
+# yarn
+alias ya="yarn add"
+alias yr="yarn remove"
+alias yad="yarn add --dev"
+alias yg="yarn global"
+alias ys="yarn start"
+
+npm() {
+  if [ -e yarn.lock ]; then
+    echo "⚠️ This is a yarn project."
+  else
+    command npm $@
+  fi
+}
