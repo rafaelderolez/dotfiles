@@ -20,7 +20,6 @@ TERM=xterm-256color
 source $DOTFILES/shell/alias.zsh
 source $DOTFILES/shell/exports.zsh
 source $DOTFILES/shell/functions.zsh
-source $DOTFILES/shell/secrets.zsh
 
 # Antigen
 source $(brew --prefix)/share/antigen/antigen.zsh
