@@ -38,6 +38,7 @@ alias yr="yarn remove"
 alias yad="yarn add --dev"
 alias yg="yarn global"
 alias ys="yarn start"
+alias yd="yarn dev"
 
 npm() {
   if [ -e yarn.lock ]; then
