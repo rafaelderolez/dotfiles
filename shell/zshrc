@@ -3,6 +3,8 @@
 # ================================================================================ #
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_TAB_TITLE_CONCAT_FOLDER_PROCESS=true
+ZSH_TAB_TITLE_ADDITIONAL_TERMS='kitty'
 
 # Case insensitve autocomplete
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -32,9 +34,8 @@ source $(brew --prefix)/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
 # Prompt
-if [ $TERM_PROGRAM != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/1_shell.omp.json)"
-fi
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/1_shell.omp.json)"
+
 
 # Zoxide
 eval "$(zoxide init zsh)"
