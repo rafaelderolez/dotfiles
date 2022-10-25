@@ -9,8 +9,7 @@ git clone https://github.com/rafaelderolez/dotfiles.git .dotfiles && cd .dotfile
 1. Set up SSH key
 2. Install homebrew
 3. Install global node modules
-4. Set Dock apps & settings
-5. Set macos default apps
+4. Set macos default apps
 
 ## Menu
 ```bash
@@ -22,7 +21,6 @@ Commands:
    install          Run dotbot to run through the whole flow
    ssh              Set up ssh
    npm              Install node modules
-   dock             Set up dock items
    duti             Assign default applications for document types
    edit             Open dotfiles in editor
    update           Update packages and package managers

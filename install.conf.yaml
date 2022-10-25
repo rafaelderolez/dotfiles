@@ -1,3 +1,4 @@
+---
 - defaults:
     link:
       relink: true
@@ -41,16 +42,6 @@
       stdin: true
       stdout: true
       description: NPM
-
-    - command: sh scripts/launch-agents.sh
-      stdin: true
-      stdout: true
-      description: Launch Agents
-
-    - command: sh scripts/dock.sh
-      stdin: true
-      stdout: true
-      description: Dock
 
 - brewfile:
     file: packages/brewfile
