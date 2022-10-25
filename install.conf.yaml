@@ -18,6 +18,7 @@
     ~/.antigenrc: shell/antigenrc
     ~/.gitconfig: gitfiles/gitconfig
     ~/.gitignore: gitfiles/gitignore
+    ~/.config/kitty: configs/kitty
 
 - shell:
     - command: sh scripts/cj.sh
