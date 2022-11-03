@@ -1,10 +1,7 @@
 # ================================================================================ #
 # Config
 # ================================================================================ #
-
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-ZSH_TAB_TITLE_CONCAT_FOLDER_PROCESS=true
-ZSH_TAB_TITLE_ADDITIONAL_TERMS='kitty'
 
 # Case insensitve autocomplete
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -35,7 +32,6 @@ antigen init ~/.antigenrc
 
 # Prompt
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/1_shell.omp.json)"
-
 
 # Zoxide
 eval "$(zoxide init zsh)"
