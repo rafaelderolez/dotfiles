@@ -43,7 +43,18 @@ alias yd="yarn dev"
 npm() {
   if [ -e yarn.lock ]; then
     echo "⚠️ This is a yarn project."
+    command yarn $@
   else
     command npm $@
+  fi
+}
+
+
+yarn() {
+  if [ -e package-lock.json ]; then
+    echo "⚠️ This is an npm project."
+    command npm run $@
+  else
+    command yarn $@
   fi
 }
