@@ -21,10 +21,6 @@ export NVM_AUTO_USE=true
 # Startup
 # ================================================================================ #
 
-# ZSH
-source $DOTFILES/shell/alias.zsh
-source $DOTFILES/shell/exports.zsh
-source $DOTFILES/shell/functions.zsh
 
 # Antigen
 source $(brew --prefix)/share/antigen/antigen.zsh
@@ -32,6 +28,11 @@ antigen init ~/.antigenrc
 
 # Prompt
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/1_shell.omp.json)"
+
+# ZSH
+source $DOTFILES/shell/alias.zsh
+source $DOTFILES/shell/exports.zsh
+source $DOTFILES/shell/functions.zsh
 
 # Zoxide
 eval "$(zoxide init zsh)"
