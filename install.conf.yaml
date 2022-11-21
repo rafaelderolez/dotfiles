@@ -19,6 +19,8 @@
     ~/.gitconfig: gitfiles/gitconfig
     ~/.gitignore: gitfiles/gitignore
     ~/.config/kitty: configs/kitty
+    ~/.config/skhd: configs/skhd
+    ~/.config/yabai: configs/yabai
 
 - shell:
     - command: sh scripts/cj.sh
