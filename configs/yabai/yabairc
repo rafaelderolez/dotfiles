@@ -23,7 +23,9 @@ yabai -m rule --add app="^Signal$" space=social
 yabai -m rule --add app="^WhatsApp$" space=social
 yabai -m rule --add app="^Discord$" space=social
 yabai -m rule --add app="^zoom.us$" space=social
+yabai -m rule --add app="^Messages$" space=social
 yabai -m rule --add app="^Spotify$" space=media
+yabai -m rule --add app="^Steam$" space=media
 
 # Float apps
 yabai -m rule --add app="^System Settings$" manage=off
