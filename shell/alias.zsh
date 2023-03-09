@@ -1,13 +1,9 @@
-# ================================================================================ #
-# Aliases
-# ================================================================================ #
-
-alias CL="cd $CLOUD_SYNC"
-alias D="cd $DOTFILES"
+# dirs
 alias DL="cd $HOME/Downloads"
 alias H="cd $HOME"
 alias C="cd $HOME/Code"
 
+# commands
 alias dot="$DOTFILES/scripts/menu.sh"
 alias ls="exa --icons --tree -L 1 --group-directories-first"
 alias mv="mv -v"
@@ -19,11 +15,9 @@ alias squoosh="squoosh-cli"
 alias zperf="/usr/bin/time zsh -i -c exit"
 alias lg="lazygit"
 
-
-# npm
+# npm (aside from @antfu/ni's aliases)
 alias nid="npm install --save-dev"
 alias nt="npm test"
-alias nit="npm install && npm test"
 alias ns="npm start"
 alias nw="npm run watch"
 

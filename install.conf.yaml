@@ -21,6 +21,7 @@
     ~/.config/kitty: configs/kitty
     ~/.config/skhd: configs/skhd
     ~/.config/yabai: configs/yabai
+    ~/.config/starship.toml: configs/starship.toml
 
 - shell:
     - command: sh scripts/cj.sh
