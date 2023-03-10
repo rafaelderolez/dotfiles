@@ -22,6 +22,7 @@
     ~/.config/skhd: configs/skhd
     ~/.config/yabai: configs/yabai
     ~/.config/starship.toml: configs/starship.toml
+    ~/.config/lazygit: configs/lazygit
 
 - shell:
     - command: sh scripts/cj.sh
