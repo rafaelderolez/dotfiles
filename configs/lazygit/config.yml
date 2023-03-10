@@ -1,0 +1,9 @@
+disableStartupPopups: true
+gui:
+  showRandomTip: false
+  showIcons: true
+  theme:
+      selectedLineBgColor:
+        - default
+      selectedRangeBgColor:
+        - default
