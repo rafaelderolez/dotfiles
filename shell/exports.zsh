@@ -8,3 +8,5 @@ export NVM_AUTO_USE=true
 export VISUAL="code --wait"
 # Set config dir
 export XDG_CONFIG_HOME="$HOME/.config"
+# https://github.com/MordechaiHadad/bob
+export PATH="/Users/raf/.local/share/bob/nvim-bin:/Users/raf/.cargo/bin:$PATH"
