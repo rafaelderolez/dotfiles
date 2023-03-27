@@ -1,4 +1,5 @@
 disableStartupPopups: true
+promptToReturnFromSubprocess: false
 gui:
   showRandomTip: false
   showIcons: true
