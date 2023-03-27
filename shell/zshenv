@@ -4,3 +4,4 @@ export CODE=$HOME/Code
 export CLOUD_SYNC="$HOME/Google Drive"
 export EDITOR="code -w"
 export HOMEBREW_BREWFILE=$HOME/.brewfile
+. "$HOME/.cargo/env"
