@@ -6,5 +6,8 @@ gui:
   theme:
       selectedLineBgColor:
         - default
+        - bold
       selectedRangeBgColor:
         - default
+      inactiveBorderColor:
+        - white
