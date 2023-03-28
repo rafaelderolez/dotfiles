@@ -1,2 +1,3 @@
 .yamlfmt
 configs/lazygit/state.yml
+gitfiles/gitconfig
