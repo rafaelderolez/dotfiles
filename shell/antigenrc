@@ -3,5 +3,6 @@ antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle lukechilds/zsh-nvm
+antigen bundle trystan2k/zsh-tab-title
 
 antigen apply

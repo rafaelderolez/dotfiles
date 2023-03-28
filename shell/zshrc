@@ -2,6 +2,7 @@
 # Config
 # ================================================================================ #
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_TAB_TITLE_CONCAT_FOLDER_PROCESS=true
 
 # Case insensitve autocomplete
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
