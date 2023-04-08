@@ -6,9 +6,9 @@
     brewfile:
       stdout: true
       stderr: true
-      include: ["tap", "brew", "cask", "mas"]
+      include: ['tap', 'brew', 'cask', 'mas']
 
-- clean: ["~"]
+- clean: ['~']
 
 - link:
     ~/.zshrc: shell/zshrc
@@ -23,7 +23,8 @@
     ~/.config/yabai: configs/yabai
     ~/.config/starship.toml: configs/starship.toml
     ~/.config/lazygit: configs/lazygit
-    ~/.config/tmuxp: configs/tmuxp
+    # ~/.config/tmuxp: configs/tmuxp
+    # ~/.config/tmuxinator: configs/tmuxinator
 
 - shell:
     - command: sh scripts/cj.sh
