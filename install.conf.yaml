@@ -23,6 +23,7 @@
     ~/.config/yabai: configs/yabai
     ~/.config/starship.toml: configs/starship.toml
     ~/.config/lazygit: configs/lazygit
+    ~/.config/neovide: configs/neovide
     # ~/.config/tmuxp: configs/tmuxp
     # ~/.config/tmuxinator: configs/tmuxinator
 
