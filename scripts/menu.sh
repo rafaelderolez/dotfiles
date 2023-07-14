@@ -13,7 +13,7 @@ function menu() {
 		sh $DOTFILES/scripts/npm.sh
 		;;
 	edit)
-		cd $DOTFILES && $EDITOR .
+		cd $DOTFILES && $EDITOR
 		;;
 	help)
 		echo
