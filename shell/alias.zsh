@@ -16,11 +16,12 @@ alias zperf="/usr/bin/time zsh -i -c exit"
 alias lg="lazygit"
 
 # npm (aside from @antfu/ni's aliases)
-alias nid="npm install --save-dev"
 alias nt="npm test"
 alias ns="npm start"
 alias nw="npm run watch"
 
+alias j=__zoxide_z
+alias ji=__zoxide_zi
 
 
 
