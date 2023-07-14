@@ -25,6 +25,7 @@ antigen init ~/.antigenrc
 source $DOTFILES/shell/alias.zsh
 source $DOTFILES/shell/exports.zsh
 source $DOTFILES/shell/functions.zsh
+source $HOME/.config/op/plugins.sh
 
 # Zoxide
 eval "$(zoxide init zsh)"
