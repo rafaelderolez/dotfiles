@@ -1,0 +1,61 @@
+[metadata]
+name = "catppuccin_gruvbox"
+
+[colors]
+foreground = "#D4BE98"
+background = "#1D2021"
+cursor_bg = "#e6eaea"
+# cursor_border = "#e6eaea"
+cursor_fg = "#152528"
+# compose_cursor = '#ff8349'
+selection_bg = "#232728"
+selection_fg = "#e6eaea"
+scrollbar_thumb = "#4B4F51"
+split = "#151819"
+visual_bell = "#e6eaea"
+ansi = [
+  "#232728",
+  "#EA6962",
+  "#89B482",
+  "#BD6F3E",
+  "#45707a",
+  "#D3869B",
+  "#7DAEA3",
+  "#E7DEB7",
+]
+brights = [
+  "#232728",
+  "#EA6962",
+  "#89B482",
+  "#BD6F3E",
+  "#45707a",
+  "#c14a4a",
+  "#7DAEA3",
+  "#E7DEB7",
+]
+
+[colors.tab_bar]
+background = "#151819"
+inactive_tab_edge = "#1D2021"
+inactive_tab_edge_hover = "#232728"
+
+[colors.tab_bar.active_tab]
+bg_color = "#D8A657"
+fg_color = "#1D2021"
+intensity = "Bold"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#151819"
+fg_color = "#BDAE8B"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#1D2021"
+fg_color = "#E7DEB7"
+
+[colors.tab_bar.new_tab]
+bg_color = "#2A2D2E"
+fg_color = "#D4BE98"
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#4B4F51"
+fg_color = "#D4BE98"
