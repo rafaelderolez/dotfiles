@@ -18,14 +18,9 @@
     ~/.antigenrc: shell/antigenrc
     ~/.gitconfig: gitfiles/gitconfig
     ~/.gitignore: gitfiles/gitignore
-    ~/.config/kitty: configs/kitty
-    ~/.config/skhd: configs/skhd
-    ~/.config/yabai: configs/yabai
+    ~/.config/wezterm: configs/wezterm
     ~/.config/starship.toml: configs/starship.toml
     ~/.config/lazygit: configs/lazygit
-    ~/.config/neovide: configs/neovide
-    # ~/.config/tmuxp: configs/tmuxp
-    # ~/.config/tmuxinator: configs/tmuxinator
 
 - shell:
     - command: sh scripts/cj.sh
