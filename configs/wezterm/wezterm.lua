@@ -1,6 +1,5 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
-local mux = wezterm.mux
 local timelineGUI = require("gui/timeline")
 local cosmosGUI = require("gui/cosmos")
 
@@ -51,7 +50,7 @@ config.keys = {
 		action = act.PromptInputLine({
 			description = wezterm.format({
 				{ Attribute = { Intensity = "Bold" } },
-				{ Foreground = { AnsiColor = "Fuchsia" } },
+				{ Foreground = { AnsiColor = "Yellow" } },
 				{ Text = "Enter name for new workspace" },
 			}),
 			action = wezterm.action_callback(function(window, pane, line)
@@ -120,19 +119,19 @@ wezterm.on("update-right-status", function(window, pane)
 		-- https://wezfurlong.org/wezterm/config/lua/wezterm/nerdfonts.html
 
 		-- Current command
-		{ Foreground = { Color = "e1aa41" } },
+		{ Foreground = { AnsiColor = "Yellow" } },
 		{ Text = wezterm.nerdfonts.fa_code .. " " .. cmd },
 		-- Divider
-		{ Foreground = { Color = "494d56" } },
+		{ Foreground = { AnsiColor = "Silver" } },
 		{ Text = " | " },
 		-- Current working directory
-		{ Foreground = { Color = "1bc5b9" } },
+		{ Foreground = { AnsiColor = "Teal" } },
 		{ Text = wezterm.nerdfonts.md_folder .. " " .. cwd },
 		-- Divider
-		{ Foreground = { Color = "494d56" } },
+		{ Foreground = { AnsiColor = "Silver" } },
 		{ Text = " | " },
 		-- Workspace name
-		{ Foreground = { Color = "db98ee" } },
+		{ Foreground = { AnsiColor = "Fuchsia" } },
 		{ Text = wezterm.nerdfonts.oct_table .. " " .. stat },
 		"ResetAttributes",
 	}))
