@@ -2,6 +2,7 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local mux = wezterm.mux
 local timelineGUI = require("gui/timeline")
+local cosmosGUI = require("gui/cosmos")
 
 local config = wezterm.config_builder()
 
@@ -80,11 +81,14 @@ config.unix_domains = {
 }
 
 -- Workspaces
-wezterm.on("gui-startup", function(cmd)
+wezterm.on("gui-startup", function()
 	local project = os.getenv("WZ_PROJECT")
 
 	if project == "timeline" then
 		timelineGUI.setup()
+	end
+	if project == "cosmos" then
+		cosmosGUI.setup()
 	end
 end)
 
@@ -114,12 +118,22 @@ wezterm.on("update-right-status", function(window, pane)
 	window:set_right_status(wezterm.format({
 		-- Wezterm has a built-in nerd fonts
 		-- https://wezfurlong.org/wezterm/config/lua/wezterm/nerdfonts.html
-		{ Text = wezterm.nerdfonts.oct_table .. " " .. stat },
-		{ Text = " | " },
-		{ Text = wezterm.nerdfonts.md_folder .. " " .. cwd },
-		{ Text = " | " },
-		{ Foreground = { Color = "FFB86C" } },
+
+		-- Current command
+		{ Foreground = { Color = "e1aa41" } },
 		{ Text = wezterm.nerdfonts.fa_code .. " " .. cmd },
+		-- Divider
+		{ Foreground = { Color = "494d56" } },
+		{ Text = " | " },
+		-- Current working directory
+		{ Foreground = { Color = "1bc5b9" } },
+		{ Text = wezterm.nerdfonts.md_folder .. " " .. cwd },
+		-- Divider
+		{ Foreground = { Color = "494d56" } },
+		{ Text = " | " },
+		-- Workspace name
+		{ Foreground = { Color = "db98ee" } },
+		{ Text = wezterm.nerdfonts.oct_table .. " " .. stat },
 		"ResetAttributes",
 	}))
 end)
