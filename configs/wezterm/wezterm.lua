@@ -2,14 +2,17 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local timelineGUI = require("gui/timeline")
 local cosmosGUI = require("gui/cosmos")
+local utils = require("misc/utils")
 
 local config = wezterm.config_builder()
 
--- Font
-config.font = wezterm.font_with_fallback({
+local monospace = wezterm.font_with_fallback({
 	"Rec Mono Linear",
 	{ family = "Symbols Nerd Font Mono", scale = 0.8 },
 })
+
+-- Font
+config.font = monospace
 config.font_size = 18
 config.line_height = 1.5
 config.use_cap_height_to_scale_fallback_fonts = true
@@ -22,6 +25,8 @@ config.window_decorations = "RESIZE"
 config.tab_max_width = 128
 config.hide_tab_bar_if_only_one_tab = false
 config.use_fancy_tab_bar = false
+config.window_background_opacity = 0.95
+config.macos_window_background_blur = 20
 config.window_padding = {
 	left = 0,
 	right = 0,
@@ -95,46 +100,20 @@ end)
 wezterm.on("update-right-status", function(window, pane)
 	-- Workspace name
 	local stat = window:active_workspace()
-	-- It's a little silly to have workspace name all the time
-	-- Utilize this to display LDR or current key table name
-	if window:active_key_table() then
-		stat = window:active_key_table()
-	end
-	if window:leader_is_active() then
-		stat = "LDR"
-	end
-
-	-- Current working directory
-	local basename = function(s)
-		-- Nothign a little regex can't fix
-		return string.gsub(s, "(.*[/\\])(.*)", "%2")
-	end
-	local cwd = basename(pane:get_current_working_dir())
-	-- Current command
-	local cmd = basename(pane:get_foreground_process_name())
 
 	-- Let's add color to one of the components
 	window:set_right_status(wezterm.format({
-		-- Wezterm has a built-in nerd fonts
-		-- https://wezfurlong.org/wezterm/config/lua/wezterm/nerdfonts.html
-
-		-- Current command
-		{ Foreground = { AnsiColor = "Yellow" } },
-		{ Text = wezterm.nerdfonts.fa_code .. " " .. cmd },
-		-- Divider
-		{ Foreground = { AnsiColor = "Silver" } },
-		{ Text = " | " },
-		-- Current working directory
-		{ Foreground = { AnsiColor = "Teal" } },
-		{ Text = wezterm.nerdfonts.md_folder .. " " .. cwd },
-		-- Divider
-		{ Foreground = { AnsiColor = "Silver" } },
-		{ Text = " | " },
-		-- Workspace name
 		{ Foreground = { AnsiColor = "Fuchsia" } },
 		{ Text = wezterm.nerdfonts.oct_table .. " " .. stat },
 		"ResetAttributes",
 	}))
+end)
+
+wezterm.on("format-tab-title", function(tab)
+	local title = utils.tab_title(tab)
+	return {
+		{ Text = title },
+	}
 end)
 
 return config
