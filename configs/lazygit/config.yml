@@ -1,10 +1,9 @@
 disableStartupPopups: true
 promptToReturnFromSubprocess: false
 gui:
+  nerdFontsVersion: '3'
   showRandomTip: false
-  showIcons: true
   theme:
-    lightTheme: false
     activeBorderColor:
       - '#FE915E'
       - bold
