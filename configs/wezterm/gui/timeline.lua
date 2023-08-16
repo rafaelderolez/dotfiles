@@ -6,6 +6,7 @@ local M = {}
 function M.setup()
 	local tlWebsiteDir = wezterm.home_dir .. "/Code/amazentis/timeline-website"
 	local tlCmsDir = wezterm.home_dir .. "/Code/amazentis/timeline-cms"
+	local tlComponentsDir = wezterm.home_dir .. "/Code/amazentis/timeline-components"
 	local workspaceName = "timeline"
 
 	-- WEB
@@ -37,6 +38,20 @@ function M.setup()
 	cmsTab:set_title("CMS")
 	cmsTerminal:send_text("nr dev\n")
 	cmsEditor:send_text("nvim\n")
+
+	-- Components
+	local componentsTab, componentsTerminal = window:spawn_tab({
+		workspace = workspaceName,
+		cwd = tlComponentsDir,
+	})
+	local componentsEditor = componentsTerminal:split({
+		direction = "Top",
+		size = 0.9,
+		cwd = tlComponentsDir,
+	})
+	componentsTab:set_title("Components")
+	componentsTerminal:send_text("ns\n")
+	componentsEditor:send_text("nvim\n")
 
 	-- We want to startup in the coding workspace
 	webTab:activate()
