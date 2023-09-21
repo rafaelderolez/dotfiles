@@ -5,7 +5,7 @@ alias C="cd $HOME/Code"
 
 # commands
 alias dot="$DOTFILES/scripts/menu.sh"
-alias ls="exa --icons --tree -L 1 --group-directories-first"
+alias ls="exa --icons --tree -L 1 --group-directories-first --all" # https://github.com/ogham/exa
 alias mv="mv -v"
 alias ping="prettyping --nolegend"
 alias r="exec zsh"

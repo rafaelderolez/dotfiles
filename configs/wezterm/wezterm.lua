@@ -19,14 +19,14 @@ config.use_cap_height_to_scale_fallback_fonts = true
 config.adjust_window_size_when_changing_font_size = false
 
 -- UI
-config.color_scheme = "Astrodark"
+config.color_scheme = "Catppuccin Macchiato"
 config.enable_scroll_bar = true
 config.window_decorations = "RESIZE"
 config.tab_max_width = 128
 config.hide_tab_bar_if_only_one_tab = false
 config.use_fancy_tab_bar = false
-config.window_background_opacity = 0.95
-config.macos_window_background_blur = 20
+-- config.window_background_opacity = 0.95
+-- config.macos_window_background_blur = 20
 config.window_padding = {
 	left = 0,
 	right = 0,

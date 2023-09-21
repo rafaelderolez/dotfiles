@@ -32,15 +32,14 @@ function M.tab_title(tab_info)
 	-- Format and return the final tab title
 	return wezterm.format({
 		{ Text = "  " },
-		{ Foreground = { AnsiColor = "Blue" } },
+		-- { Foreground = { AnsiColor = "Blue" } },
 		{ Text = icon },
 		{ Text = "  " },
-		{ Foreground = { AnsiColor = "Silver" } },
+		-- { Foreground = { AnsiColor = "Silver" } },
 		{ Text = title },
 		{ Text = "  " },
 		"ResetAttributes",
 	})
-	-- return string.format(" %s  %s ", icon, title)
 end
 
 return M
