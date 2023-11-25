@@ -6,7 +6,6 @@ gatsby-cli
 kill-port
 nodemon
 npm-check-updates
-serve
 fast-cli
 svgo
 trash-cli
@@ -14,3 +13,4 @@ vercel
 vtop
 wipe-modules
 yarn
+pnpm
