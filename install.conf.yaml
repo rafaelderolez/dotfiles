@@ -21,6 +21,7 @@
     ~/.config/wezterm: configs/wezterm
     ~/.config/starship.toml: configs/starship.toml
     ~/.config/lazygit: configs/lazygit
+    ~/.config/karabiner: configs/karabiner
 
 - shell:
     - command: sh scripts/cj.sh
