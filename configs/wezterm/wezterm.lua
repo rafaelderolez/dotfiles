@@ -1,25 +1,27 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
-local timelineGUI = require("gui/timeline")
 local cosmosGUI = require("gui/cosmos")
+local finderopvangGUI = require("gui/finderopvang")
+local timelineGUI = require("gui/timeline")
 local utils = require("misc/utils")
 
 local config = wezterm.config_builder()
 
 local monospace = wezterm.font_with_fallback({
-	"Rec Mono Linear",
+	-- "Rec Mono Linear",
+	"Geist Mono",
 	{ family = "Symbols Nerd Font Mono", scale = 0.8 },
 })
 
 -- Font
 config.font = monospace
 config.font_size = 18
-config.line_height = 1.5
+config.line_height = 1.3
 config.use_cap_height_to_scale_fallback_fonts = true
 config.adjust_window_size_when_changing_font_size = false
 
 -- UI
-config.color_scheme = "Catppuccin Macchiato"
+config.color_scheme = "Tokyo Night"
 config.enable_scroll_bar = true
 config.window_decorations = "RESIZE"
 config.tab_max_width = 128
@@ -41,12 +43,39 @@ config.inactive_pane_hsb = {
 -- Keymaps
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
+	-- Tab navigation
+	{ key = "Tab", mods = "CTRL", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "Tab", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+
 	{ key = "w", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }) },
 	-- Toggle current pane visibility
 	{
 		key = "t",
 		mods = "CTRL",
 		action = wezterm.action.TogglePaneZoomState,
+	},
+
+	-- Pane Actions
+	{
+		key = "\\",
+		mods = "CTRL",
+		action = wezterm.action.SplitPane({
+			direction = "Down",
+			size = { Percent = 20 },
+		}),
+	},
+	{
+		key = "|",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SplitPane({
+			direction = "Right",
+			size = { Percent = 50 },
+		}),
+	},
+	{
+		key = "w",
+		mods = "CMD",
+		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
 
 	{
@@ -93,6 +122,9 @@ wezterm.on("gui-startup", function()
 	end
 	if project == "cosmos" then
 		cosmosGUI.setup()
+	end
+	if project == "finderopvang" then
+		finderopvangGUI.setup()
 	end
 end)
 
