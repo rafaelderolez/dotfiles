@@ -11,13 +11,3 @@ gui:
       - '#7A7C7E' # Text
     selectedLineBgColor:
       - '#1E222A' # Surface0
-customCommands:
-  - key: 'W'
-    prompts:
-      - type: 'input'
-        title: 'Commit'
-        initialValue: ''
-        key: 'CommitCommand'
-    command: git commit -m "{{index .PromptResponses 0}}" --no-verify
-    context: 'global'
-    subprocess: true
