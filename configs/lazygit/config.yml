@@ -11,3 +11,9 @@ gui:
       - '#7A7C7E' # Text
     selectedLineBgColor:
       - '#1E222A' # Surface0
+customCommands:
+  - key: 'C'
+    context: 'files'
+    command: 'git diff --cached | pbcopy; open raycast://ai-commands/git-commit-message && git commit'
+    subprocess: true
+    showOutput: true
