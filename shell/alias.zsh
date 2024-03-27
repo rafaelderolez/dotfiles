@@ -14,6 +14,7 @@ alias fast="fast --upload"
 alias squoosh="squoosh-cli"
 alias zperf="/usr/bin/time zsh -i -c exit"
 alias lg="lazygit"
+alias commit-raycast="git diff --cached | pbcopy; open raycast://ai-commands/git-commit-message && git commit"
 
 # npm (aside from @antfu/ni's aliases)
 alias nt="npm test"
