@@ -15,4 +15,5 @@ customCommands:
   - key: 'C'
     context: 'files'
     command: 'git diff --cached | pbcopy; open raycast://ai-commands/git-commit-message && git commit'
+    description: 'Raycast AI Commit'
     subprocess: true
