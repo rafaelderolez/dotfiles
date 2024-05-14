@@ -24,5 +24,8 @@ alias nw="npm run watch"
 alias j=__zoxide_z
 alias ji=__zoxide_zi
 
+# vim
+alias vi="nvim"
+alias vim="nvim"
 
 
