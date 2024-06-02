@@ -1,13 +1,9 @@
-@fabiospampinato/bump
 @sanity/cli
-@squoosh/cli
 diff-so-fancy
-gatsby-cli
 kill-port
 nodemon
 npm-check-updates
 fast-cli
-svgo
 trash-cli
 vercel
 vtop
