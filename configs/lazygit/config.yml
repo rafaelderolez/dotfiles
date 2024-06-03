@@ -5,12 +5,12 @@ gui:
   showRandomTip: false
   theme:
     activeBorderColor:
-      - '#FE915E'
-      - bold
+      - '#86e1fc'
     inactiveBorderColor:
-      - '#7A7C7E' # Text
+      - '#737aa2' # Surface0
+      - bold
     selectedLineBgColor:
-      - '#1E222A' # Surface0
+      - '#1e2030' # Text
 customCommands:
   - key: 'C'
     context: 'files'
