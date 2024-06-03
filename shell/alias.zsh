@@ -28,4 +28,8 @@ alias ji=__zoxide_zi
 alias vi="nvim"
 alias vim="nvim"
 
+alias bi="brew install"
+alias bu="brew uninstall"
+alias bup="brew upgrade"
+
 
