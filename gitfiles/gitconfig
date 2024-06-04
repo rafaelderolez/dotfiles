@@ -4,6 +4,9 @@
     name = Rafael Derolez
 
 # Include private configuration settings
+# Add this in gitconfig_private
+# [user]
+#	  signingkey = myKey
 [include]
     path = ~/.gitconfig_private
 
