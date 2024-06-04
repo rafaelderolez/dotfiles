@@ -1,6 +1,6 @@
 .yamlfmt
 configs/lazygit/state.yml
-gitfiles/gitconfig
+gitfiles/gitconfig_private
 
 configs/karabiner/*
 !configs/karabiner/karabiner.json

@@ -17,6 +17,7 @@
     ~/.hushlogin: shell/hushlogin
     ~/.antigenrc: shell/antigenrc
     ~/.gitconfig: gitfiles/gitconfig
+    ~/.gitconfig_private: gitfiles/gitconfig_private
     ~/.gitignore: gitfiles/gitignore
     ~/.config/wezterm: configs/wezterm
     ~/.config/starship.toml: configs/starship.toml

@@ -1,17 +1,47 @@
+# User information
 [user]
-	email = raf@derolez.dev
-	name = Rafael Derolez
+    email = raf@derolez.dev
+    name = Rafael Derolez
+
+# Include private configuration settings
+[include]
+    path = ~/.gitconfig_private
+
+# Core configuration
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
+
+# Push behavior
 [push]
-	default = simple
+    default = simple
+
+# Automatically prune on fetch
 [fetch]
-	prune = true
+    prune = true
+
+# Diff settings
 [diff]
-	colorMoved = zebra
+    colorMoved = zebra
+
+# Rebase settings
 [rebase]
-	autoStash = true
+    autoStash = true
+
+# Pull behavior
 [pull]
-	rebase = false
+    rebase = false
+
+# Default branch name
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
+# GPG settings
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+
+# Commit settings
+[commit]
+    gpgsign = true
+
