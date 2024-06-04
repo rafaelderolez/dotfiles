@@ -1,17 +1,21 @@
 # Dotfiles
 
 ## Installation
+
 ```bash
+mkdir ~/.config
 git clone https://github.com/rafaelderolez/dotfiles.git .dotfiles && cd .dotfiles && ./install
 ```
 
 ## Features
+
 1. Set up SSH key
 2. Install homebrew
 3. Install global node modules
 4. Set macos default apps
 
 ## Menu
+
 ```bash
 DOTFILES
 
@@ -28,4 +32,5 @@ Commands:
 ```
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
