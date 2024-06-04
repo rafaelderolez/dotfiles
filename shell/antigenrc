@@ -2,6 +2,6 @@ antigen bundle Aloxaf/fzf-tab
 antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zdharma-continuum/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle trystan2k/zsh-tab-title
+antigen bundle trystan2k/zsh-tab-title@main
 
 antigen apply
