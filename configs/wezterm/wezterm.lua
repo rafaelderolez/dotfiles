@@ -9,8 +9,7 @@ local utils = require "misc/utils"
 local config = wezterm.config_builder()
 
 local monospace = wezterm.font_with_fallback {
-	-- "Rec Mono Linear",
-	"Geist Mono",
+	"GeistMono NF",
 	{ family = "Symbols Nerd Font Mono", scale = 0.8 },
 }
 
