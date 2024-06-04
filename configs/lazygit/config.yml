@@ -6,6 +6,7 @@ gui:
   theme:
     activeBorderColor:
       - '#86e1fc'
+      - bold
     inactiveBorderColor:
       - '#737aa2' # Surface0
       - bold
