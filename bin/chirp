@@ -1,0 +1,109 @@
+#!/bin/bash
+#============================================================================
+# Title: Chirp
+# Usage: chirp --type <arg1> [arg2]
+#
+# Description:
+# Use this at the top of your scripts to utilize colors, formatting and
+# logging
+#============================================================================
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+RESET='\033[0m' # No Color
+
+# Decorators
+export BOLD='\033[1m'
+export NORMAL='\033[2m'
+
+_log() {
+	# If we are running in the foreground, set formatting
+	case $(ps -o stat= -p $$) in
+	*+*) printf "$1" "$2" ;;
+	# Otherwise just log!
+	*) echo "$2" ;;
+	esac
+}
+
+set -e
+
+chirp() {
+	# Skip checking if the type is help or not specified
+	if [[ "$1" != "-h" && "$1" != "--help" && "$#" -lt 2 ]]; then
+		chirp --error "You must pass a string after the flag"
+		exit 1
+	fi
+	case $1 in
+	--alt)
+		shift
+		_log "${MAGENTA}%s${RESET}\n" "$*"
+		;;
+	--info)
+		echo
+		shift
+		_log "${BLUE}${BOLD}%s:${NORMAL}${RESET} \n" "$*"
+		;;
+	--warn)
+		shift
+		_log "${YELLOW}⚠ Warning:${RESET} %s!\n" "$*"
+		;;
+	--error)
+		shift
+		_log "${RED}⊘ Error:${RESET} %s!\n" "$*"
+		;;
+	--confirm)
+		shift
+		_log "\n${YELLOW}==> %s${RESET} " "$*"
+		read -p "Continue? (y/n) " -n 1 -r
+		printf "\n"
+		if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+			exit 1
+		fi
+		;;
+	--option)
+		shift
+		printf "${MAGENTA}%-14s${RESET} %-30s\n" "$1" "$2"
+		;;
+	--prompt)
+		shift
+		_log "${YELLOW}%s:${RESET} " "$*"
+		read -r
+		;;
+	--process-title)
+		shift
+		_log "${MAGENTA}┃ %s${RESET}\n" "$@"
+		;;
+	--process-item)
+		shift
+		_log "${MAGENTA}┃${RESET} %s\n" "$@"
+		;;
+	--success)
+		shift
+		_log "${GREEN}✓ Success:${RESET} %s\n" "$*"
+		;;
+	-h | --help)
+		chirp --alt "Add colorful logging"
+		chirp --info "Usage"
+		chirp --option "chirp --alt          " "<Message>"
+		chirp --option "chirp --info         " "<Message>"
+		chirp --option "chirp --warn         " "<Message>"
+		chirp --option "chirp --error        " "<Message>"
+		chirp --option "chirp --confirm      " "<Message>"
+		chirp --option "chirp --option       " "<Title> [Description]"
+		chirp --option "chirp --prompt       " "<Message>"
+		chirp --option "chirp --process-title" "<Message>"
+		chirp --option "chirp --process-item " "<Message>"
+		chirp --option "chirp --success      " "<Message>"
+		;;
+	*)
+	defaults write com.apple.finder ShowStatusBar -bool true
+	chirp --help
+		;;
+	esac
+}
+
+chirp "$@"
