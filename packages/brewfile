@@ -4,153 +4,323 @@ tap "fsouza/prettierd"
 tap "fwartner/tap"
 tap "getsentry/tools"
 tap "homebrew/bundle"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "isacikgoz/taps"
 tap "jesseduffield/lazygit"
 tap "khanhas/tap"
 tap "koekeishiya/formulae"
+tap "shopify/shopify"
+tap "vitorgalvao/tiny-scripts"
 tap "wez/wezterm"
+# Run your GitHub Actions locally
 brew "act"
+# Plugin manager for zsh, inspired by oh-my-zsh and vundle
 brew "antigen"
-brew "zstd"
+# Color management engine supporting ICC profiles
 brew "little-cms2"
+# Image format providing lossless and lossy compression for web images
 brew "webp"
+# New file format for still image compression
 brew "jpeg-xl"
+# Codec library for encoding and decoding AV1 video streams
 brew "aom"
-brew "python@3.12"
+# Record and share terminal sessions
 brew "asciinema"
+# Core application library for C
 brew "glib"
+# Protocol definitions and daemon for D-Bus at-spi
 brew "at-spi2-core"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Toolchain of the web
 brew "biome"
+# Vector graphics library with cross-device output support
 brew "cairo"
-brew "coreutils"
+# Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Helper program to build and install c-like libraries
+brew "cargo-c"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Tool for managing dock items
 brew "dockutil"
+# Lightning-fast linter for .env files written in Rust
 brew "dotenv-linter"
+# Select default apps for documents and URL schemes on macOS
 brew "duti"
-brew "libuv"
+# Platform built on V8 to build network applications
 brew "node"
+# AST-based pattern checker for JavaScript
 brew "eslint"
+# Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Validating, recursive, caching DNS resolver
 brew "unbound"
+# GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# OpenType text shaping engine
 brew "harfbuzz"
+# Library for JPEG-2000 image manipulation
 brew "openjpeg"
+# Image processing and image analysis library
 brew "leptonica"
+# OCR (Optical Character Recognition) engine
 brew "tesseract"
+# Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Create thumbnails for your video files
 brew "ffmpegthumbnailer"
+# macOS CLI for managing custom icons for files and folders
 brew "fileicon"
+# Terminal JSON viewer
 brew "fx"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# Library for encoding and decoding .avif files
 brew "libavif"
+# Graphics library to dynamically manipulate images
 brew "gd"
+# Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
+# GitHub command-line tool
 brew "gh"
+# Interpreter for PostScript and PDF
 brew "ghostscript"
+# Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
-brew "python@3.10"
+# Quickly rewrite git repository history
 brew "git-filter-repo"
+# Git extension to generate reports for standup meetings
+brew "git-standup"
+# Trim your git remote tracking branches that are merged or gone
 brew "git-trim"
+# Network related modules for glib
 brew "glib-networking"
+# Render markdown on the CLI
 brew "glow"
+# GNU implementation of the famous stream editor
 brew "gnu-sed"
+# Colorize logfiles and command output
+brew "grc"
+# GNU grep, egrep and fgrep
 brew "grep"
+# Toolkit for creating graphical user interfaces
 brew "gtk+3"
+# Generic library support script
 brew "libtool"
+# GNU Ubiquitous Intelligent Language for Extensions
 brew "guile"
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
+# LLVM's OpenMP runtime library
 brew "libomp", link: true
+# Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Image loading and rendering library
 brew "imlib2"
+# Command-line pager for JSON data
 brew "jless"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Library to render SVG files using Cairo
 brew "librsvg"
+# Powerful, lightweight programming language
 brew "lua"
-brew "luajit"
-brew "luv"
+# Just-In-Time Compiler (JIT) for the Lua programming language
+brew "luajit", args: ["HEAD"]
+# Keep your Mac's application settings in sync
 brew "mackup"
+# CLI for Node.js style checker and lint tool for Markdown files
 brew "markdownlint-cli"
+# Mac App Store command-line interface
 brew "mas"
+# Simple tool to make locally trusted development certificates
 brew "mkcert"
+# 'traceroute' and 'ping' in a single tool
 brew "mtr"
+# Fast, highly customisable system info script
 brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# No Nonsense Neovim Client in Rust
 brew "neovide"
+# Small build system for use with gyp or CMake
 brew "ninja"
+# Development kit for the Java programming language
 brew "openjdk"
+# Fast, disk space efficient package manager
 brew "pnpm"
+# PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
+# Wrapper to colorize and simplify ping's output
 brew "prettyping"
+# Protocol buffers (Google's data interchange format)
 brew "protobuf"
+# Python version management
 brew "pyenv"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Install various Ruby versions and implementations
 brew "ruby-build"
+# Ruby version manager
 brew "rbenv"
+# Perl-powered file rename script with many helpful built-ins
 brew "rename"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Safe, concurrent, practical language
 brew "rust"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Opinionated Lua code formatter
 brew "stylua"
+# User interface to the TELNET protocol
 brew "telnet"
+# Send macOS User Notifications from the command-line
 brew "terminal-notifier"
+# Terminal multiplexer
 brew "tmux"
+# Manage complex tmux sessions easily
 brew "tmuxinator"
+# Tmux session manager. Built on libtmux
 brew "tmuxp"
+# Color-based alternative to figlet (uses libcaca)
 brew "toilet"
+# Program that allows you to count code, quickly
 brew "tokei"
+# CLI tool that moves files or folder to the trash
+brew "trash"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Command-line unarchiving tools supporting multiple formats
 brew "unar"
+# Internet file retriever
 brew "wget"
+# Show the current WiFi network password
 brew "wifi-password"
+# Copy terminal output to clipboard
 brew "yank"
+# Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Download YouTube videos from the command-line
 brew "youtube-dl"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Next-generation plugin manager for zsh
 brew "zplug"
+# UNIX shell (command interpreter)
 brew "zsh"
+# AI on the command line
 brew "charmbracelet/tap/mods"
+# 🗑️ cleanup script for macos
 brew "fwartner/tap/mac-cleanup"
+# Sentry command-line client for some generic tasks
 brew "getsentry/tools/sentry-cli"
+# fast and interactive tldr client written with go
 brew "isacikgoz/taps/tldr"
+# A simple terminal UI for git commands, written in Go
 brew "jesseduffield/lazygit/lazygit"
+# A CLI tool to build for the Shopify platform
+brew "shopify/shopify/shopify-cli"
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line interface for 1Password
 cask "1password-cli"
+# Status bar app to overcome time-constrained WiFi networks
 cask "airpass"
+# GPU-accelerated terminal emulator
+cask "alacritty"
+# Application launcher and productivity software
+cask "alfred"
+# Automatic tiling window manager similar to xmonad
 cask "amethyst"
+# Tool to customise input devices and automate computer systems
+cask "bettertouchtool"
+# Web browser focusing on privacy
+cask "brave-browser"
+# Free and open-source web browser
 cask "chromium"
+# Visually compare and merge files
 cask "diffmerge"
+# Voice and text chat software
+cask "discord"
+# Tool to hide status bar icons
 cask "dozer"
+# Reimagine your terminal
 cask "fig"
+# Collaborative team software
 cask "figma"
+# Web browser
 cask "firefox"
+# Developer targeted fonts with a high number of glyphs
 cask "font-geist-mono-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-hack-nerd-font"
+# Client for the Google Drive storage service
 cask "google-drive"
+# GraphQL IDE for better development workflows
 cask "graphql-playground"
+# Open-source video transcoder
+cask "handbrake"
+# Tool to optimise images to a smaller size
 cask "imageoptim"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Spot and merge differences in text and image files or folders
+cask "kaleidoscope"
+# Open-source screen recorder built with web technology
 cask "kap"
+# Keyboard customiser
+cask "karabiner-elements"
+# Utility that shows the latest app updates
+cask "latest"
+# Tool to control external monitor brightness & volume
 cask "monitorcontrol"
+# Archive manager for data compression and backups
 cask "rar"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Font manager that helps preview, install, sync and manage fonts
+cask "rightfont"
+# Instant messaging application focusing on security
 cask "signal"
+# Team communication and collaboration software
 cask "slack"
+# Music streaming service
 cask "spotify"
+# Video game digital distribution service
 cask "steam"
+# Remote access and connectivity software focused on security
 cask "teamviewer"
+# Open-source BitTorrent client
+cask "transmission"
+# Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
 cask "vlc"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Native desktop client for WhatsApp
 cask "whatsapp"
+# Video communication and virtual meeting platform
 cask "zoom"
 mas "EasyRes", id: 688211836
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
