@@ -59,19 +59,16 @@ while :; do
 			cd "$DOTFILES" || exit
 			chirp --success "Your Brewfile is up to date"
 			if git diff -s --exit-code "$HOMEBREW_BREWFILE"; then
-				commit_msg=$(
-					git --git-dir="$DOTFILES"/.git --no-pager -C "$DOTFILES" diff --unified=0 "$HOMEBREW_BREWFILE" |
-						grep --color=never '^[+|-][^+|-]' |
-						sed "s/^+/Add /" |
-						sed "s/^-/Remove /"
-				)
 				git --git-dir="$DOTFILES"/.git add "$HOMEBREW_BREWFILE"
-				git --git-dir="$DOTFILES"/.git commit -m "$commit_msg"
+				git --git-dir="$DOTFILES"/.git commit -m "Update Brewfile"
 				chirp --success "Bundle changes committed"
+			else
+				echo "No changes to commit."
 			fi
 		)
 		break
 		;;
+
 	-w | --why)
 		brew list -1 --formula | while read -r cask; do
 			echo -ne "\x1B[1;34m $cask \x1B[0m"
