@@ -146,14 +146,14 @@ wezterm.on("gui-startup", function()
 end)
 
 -- Decorate top-right status bar
-wezterm.on("update-right-status", function(window, pane)
+wezterm.on("update-right-status", function(window)
 	-- Workspace name
 	local stat = window:active_workspace()
 
 	-- Let's add color to one of the components
 	window:set_right_status(wezterm.format {
 		{ Foreground = { AnsiColor = "Fuchsia" } },
-		{ Text = wezterm.nerdfonts.oct_table .. " " .. stat },
+		{ Text = wezterm.nerdfonts.oct_table .. " " .. stat .. " " },
 		"ResetAttributes",
 	})
 end)
