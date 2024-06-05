@@ -1,7 +1,7 @@
 #!/bin/bash
 #============================================================================
 # Title: brewfile
-# Usage: brewfile [ -c | --clean | -d | --dump | -l | --list | -h | --help | -s | --save ]
+# Usage: brewfile [ -c | --clean | clean | -d | --dump | dump | -i | --install | install | -h | --help | help | -s | --save | save | -w | --why | why ]
 #
 # Description:
 # Homebrew Brewfile manager
@@ -9,52 +9,37 @@
 
 while :; do
 	case $1 in
-	-c | --clean)
+	-c | --clean | clean)
 		chirp --info "Running bundle clean"
-		chirp --process-item "Pausing brew-dump launch agent"
-		launchctl unload ~/Library/LaunchAgents/com.raf.brew-dump.plist
-		chirp --process-item "Uninstalling uncommitted packages"
-		brew bundle cleanup --force --file "$HOMEBREW_BREWFILE" --describe
-		chirp --process-item "Restarting brew-dump launch agent"
-		launchctl load ~/Library/LaunchAgents/com.raf.brew-dump.plist
+		brew bundle cleanup --force --file "$HOMEBREW_BREWFILE" --describe --taps --brews --casks --mas
 		chirp --success "Cleanup complete"
 		break
 		;;
-	-d | --dump)
+	-d | --dump | dump)
 		chirp --process-title "Dumping Homebrew bundle"
 		brew bundle dump --force --file="$HOMEBREW_BREWFILE" --describe --taps --brews --casks --mas
 		chirp --success "Dump complete -> $HOMEBREW_BREWFILE"
 		break
 		;;
-	-i | --install)
+	-i | --install | install | i)
 		chirp --process-title "Installing Homebrew bundle"
 		brew bundle --quiet --no-upgrade --file="$HOMEBREW_BREWFILE"
 		break
 		;;
-	-l | --list)
-		chirp --info "Your Brewfile has uncommitted changes"
-		git --no-pager -C "$DOTFILES" diff --unified=0 "$HOMEBREW_BREWFILE" |
-			grep --color=never '^[+|-][^+|-]' |
-			sed "s/^+/$(tput setaf 2)Added$(tput sgr0) /" |
-			sed "s/^-/$(tput setaf 1)Removed$(tput sgr0) /" |
-			GREP_COLOR='01;34' grep --color -e '"[^"]\+"'
-		break
-		;;
-	-h | --help)
+	-h | --help | help)
 		chirp --info "Manage your Homebrew Brewfile"
 		echo
 		chirp --alt "Options"
 		echo
-		chirp --option "-c, --clean" "Uninstall any brews that aren't in the brewfile"
-		chirp --option "-d, --dump" "Dump added/removed brews"
-		chirp --option "-h, --help" "Show help"
-		chirp --option "-s, --save" "Git commit bundle changes"
-		chirp --option "-w, --why" "List dependencies"
-		chirp --option "-i, --install" "Install brews from Brewfile"
-		chirp --option "-l, --list" "List uncommitted changes"
+		chirp --option "-c, --clean, clean" "Uninstall any brews that aren't in the brewfile"
+		chirp --option "-d, --dump, dump" "Dump added/removed brews"
+		chirp --option "-i, --install, install, i" "Install brews from Brewfile"
+		chirp --option "-h, --help, help" "Show help"
+		chirp --option "-s, --save, save" "Git commit bundle changes"
+		chirp --option "-w, --why, why" "List dependencies"
 		break
 		;;
-	-s | --save)
+	-s | --save | save)
 		(
 			cd "$DOTFILES" || exit
 			chirp --success "Your Brewfile is up to date"
@@ -69,12 +54,13 @@ while :; do
 		break
 		;;
 
-	-w | --why)
+	-w | --why | why)
 		brew list -1 --formula | while read -r cask; do
 			echo -ne "\x1B[1;34m $cask \x1B[0m"
 			brew uses "$cask" --installed | awk '{printf(" %s ", $0)}'
 			echo ""
 		done
+		break
 		;;
 	*)
 		b --help
