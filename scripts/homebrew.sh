@@ -1,12 +1,9 @@
-source ${DOTFILES}/scripts/utils.sh
+chirp --process-title "Homebrew"
 
-install_homebrew() {
-	if test ! $(which brew); then
-		success "Homebrew already installed"
-		echo "Installing Homebrew"
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-	fi
-	success "Homebrew installed"
-}
-
-install_homebrew
+if ! command -v brew >/dev/null; then
+	chirp --info "Installing Homebrew"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	chirp --success "Homebrew installed successfully"
+else
+	chirp --success "Homebrew already installed"
+fi

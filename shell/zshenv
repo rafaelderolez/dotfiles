@@ -3,4 +3,4 @@ export ZDOTDIR=$HOME
 export CODE=$HOME/Code
 export CLOUD_SYNC="$HOME/Google Drive"
 export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_BREWFILE=$HOME/.dotfiles/packages/Brewfile
+export HOMEBREW_BREWFILE=$HOME/.dotfiles/packages/brewfile

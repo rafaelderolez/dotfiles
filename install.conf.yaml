@@ -10,6 +10,9 @@
 
 - clean: ['~']
 
+- create:
+    - ~/.config
+
 - link:
     ~/.zshrc: shell/zshrc
     ~/.zshenv: shell/zshenv
@@ -25,15 +28,7 @@
     ~/.config/karabiner: configs/karabiner
 
 - shell:
-    - command: sh scripts/cj.sh
-      stdout: true
-
     - [git submodule update --init --recursive, Installing submodules]
-
-    - command: sh scripts/ssh.sh
-      stdin: true
-      stdout: true
-      description: Set up SSH key
 
     - command: sh scripts/homebrew.sh
       stdin: true
@@ -43,10 +38,10 @@
     - command: exec zsh
       description: Reload shell
 
-    - command: sh scripts/npm.sh
+    - command: sh packages/npm.sh
       stdin: true
       stdout: true
-      description: NPM
+      description: (P)NPM
 
 - brewfile:
     file: packages/brewfile

@@ -3,6 +3,7 @@
 # ================================================================================ #
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_TAB_TITLE_CONCAT_FOLDER_PROCESS=true
+DISABLE_AUTO_TITLE="true"
 
 # Case insensitve autocomplete
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -28,7 +29,12 @@ eval "$(starship init zsh)"
 eval "$(pyenv init --path)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH=$PATH:/Users/raf/.spicetify
+
+
+# Make all bins executable
+chmod +x $DOTFILES/bin/*
+# Add bin to PATH
+export PATH=$PATH:$DOTFILES/bin
 
 # tabtab source for packages
 # uninstall by removing these lines

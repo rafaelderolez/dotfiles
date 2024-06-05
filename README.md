@@ -3,7 +3,6 @@
 ## Installation
 
 ```bash
-mkdir ~/.config
 git clone https://github.com/rafaelderolez/dotfiles.git .dotfiles && cd .dotfiles && ./install
 ```
 
