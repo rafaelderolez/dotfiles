@@ -146,10 +146,6 @@ brew "mkcert"
 brew "mtr"
 # Fast, highly customisable system info script
 brew "neofetch"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# No Nonsense Neovim Client in Rust
-brew "neovide"
 # Small build system for use with gyp or CMake
 brew "ninja"
 # Development kit for the Java programming language
@@ -158,12 +154,8 @@ brew "openjdk"
 brew "pnpm"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
-# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
-brew "prettier"
 # Wrapper to colorize and simplify ping's output
 brew "prettyping"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
 # Python version management
 brew "pyenv"
 # Interpreted, interactive, object-oriented programming language
@@ -172,10 +164,6 @@ brew "python@3.10"
 brew "python@3.11"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-# Install various Ruby versions and implementations
-brew "ruby-build"
-# Ruby version manager
-brew "rbenv"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
 # Search tool like grep and The Silver Searcher
@@ -190,14 +178,6 @@ brew "stylua"
 brew "telnet"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
-# Terminal multiplexer
-brew "tmux"
-# Manage complex tmux sessions easily
-brew "tmuxinator"
-# Tmux session manager. Built on libtmux
-brew "tmuxp"
-# Color-based alternative to figlet (uses libcaca)
-brew "toilet"
 # Program that allows you to count code, quickly
 brew "tokei"
 # CLI tool that moves files or folder to the trash
@@ -206,6 +186,8 @@ brew "trash"
 brew "tree"
 # Command-line unarchiving tools supporting multiple formats
 brew "unar"
+# Command-line interface for Vercel
+brew "vercel-cli"
 # Internet file retriever
 brew "wget"
 # Show the current WiFi network password
@@ -244,10 +226,10 @@ cask "1password-cli"
 cask "airpass"
 # GPU-accelerated terminal emulator
 cask "alacritty"
-# Application launcher and productivity software
-cask "alfred"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
+# Chromium based browser
+cask "arc"
 # Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
 # Web browser focusing on privacy
@@ -258,10 +240,6 @@ cask "chromium"
 cask "diffmerge"
 # Voice and text chat software
 cask "discord"
-# Tool to hide status bar icons
-cask "dozer"
-# Reimagine your terminal
-cask "fig"
 # Collaborative team software
 cask "figma"
 # Web browser
@@ -278,18 +256,18 @@ cask "graphql-playground"
 cask "handbrake"
 # Tool to optimise images to a smaller size
 cask "imageoptim"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
+# Menu bar manager
+cask "jordanbaird-ice"
 # Spot and merge differences in text and image files or folders
 cask "kaleidoscope"
 # Open-source screen recorder built with web technology
 cask "kap"
 # Keyboard customiser
 cask "karabiner-elements"
-# Utility that shows the latest app updates
-cask "latest"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
+# Calendar for professionals and teams
+cask "notion-calendar"
 # Archive manager for data compression and backups
 cask "rar"
 # Control your tools with a few keystrokes
