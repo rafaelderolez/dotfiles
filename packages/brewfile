@@ -3,6 +3,7 @@ tap "charmbracelet/tap"
 tap "fsouza/prettierd"
 tap "fwartner/tap"
 tap "getsentry/tools"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "isacikgoz/taps"
@@ -212,6 +213,8 @@ brew "charmbracelet/tap/mods"
 brew "fwartner/tap/mac-cleanup"
 # Sentry command-line client for some generic tasks
 brew "getsentry/tools/sentry-cli"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 # fast and interactive tldr client written with go
 brew "isacikgoz/taps/tldr"
 # A simple terminal UI for git commands, written in Go
@@ -264,6 +267,8 @@ cask "kaleidoscope"
 cask "kap"
 # Keyboard customiser
 cask "karabiner-elements"
+# App to manage software development and track bugs
+cask "linear-linear"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
 # Calendar for professionals and teams
