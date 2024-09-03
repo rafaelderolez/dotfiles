@@ -29,8 +29,8 @@ config.window_frame = {
 }
 
 -- UI
-config.color_scheme = "Tokyo Night"
-config.enable_scroll_bar = true
+config.color_scheme = "tokyonight_storm"
+config.enable_scroll_bar = false
 config.window_decorations = "RESIZE"
 config.tab_max_width = 128
 config.hide_tab_bar_if_only_one_tab = false
