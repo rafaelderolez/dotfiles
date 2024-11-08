@@ -12,6 +12,10 @@ gui:
       - bold
     selectedLineBgColor:
       - '#1e2030' # Text
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
 customCommands:
   - key: 'C'
     context: 'files'
