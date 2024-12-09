@@ -3,6 +3,7 @@ local act = wezterm.action
 local cosmosGUI = require "gui/cosmos"
 local finderopvangGUI = require "gui/finderopvang"
 local portfolioGUI = require "gui/portfolio"
+local rodeoGUI = require "gui/rodeo"
 local timelineGUI = require "gui/timeline"
 local utils = require "misc/utils"
 
@@ -143,6 +144,7 @@ wezterm.on("gui-startup", function()
 	if project == "cosmos" then cosmosGUI.setup() end
 	if project == "finderopvang" then finderopvangGUI.setup() end
 	if project == "portfolio" then portfolioGUI.setup() end
+	if project == "rodeo" then rodeoGUI.setup() end
 end)
 
 -- Decorate top-right status bar
