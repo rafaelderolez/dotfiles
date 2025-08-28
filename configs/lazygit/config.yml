@@ -16,23 +16,3 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
-customCommands:
-  - key: 'C'
-    context: 'files'
-    command: 'git diff --cached | pbcopy; open raycast://ai-commands/git-commit-message && git commit'
-    description: 'Raycast AI Commit'
-    subprocess: true
-
-  - key: '<c-a>' # ctrl + a
-    description: 'Pick AI commit'
-    command: 'echo "{{.Form.Msg}}" > .git/COMMIT_EDITMSG && nvim .git/COMMIT_EDITMSG && [ -s .git/COMMIT_EDITMSG ] && git commit -F .git/COMMIT_EDITMSG || echo "Commit message is empty, commit aborted."'
-    context: 'files'
-    subprocess: true
-    prompts:
-      - type: 'menuFromCommand'
-        title: 'AI Commits'
-        key: 'Msg'
-        command: 'bunx @m7medvision/lazycommit@latest'
-        filter: '^(?P<number>\d+)\.\s(?P<message>.+)$'
-        valueFormat: '{{ .message }}'
-        labelFormat: '{{ .number }}: {{ .message | green }}'
