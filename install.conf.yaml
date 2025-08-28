@@ -22,7 +22,7 @@
     ~/.gitconfig: gitfiles/gitconfig
     ~/.gitconfig_private: gitfiles/gitconfig_private
     ~/.gitignore: gitfiles/gitignore
-    ~/.config/wezterm: configs/wezterm
+    # ~/.config/wezterm: configs/wezterm
     ~/.config/starship.toml: configs/starship.toml
     ~/.config/lazygit: configs/lazygit
     ~/.config/karabiner: configs/karabiner

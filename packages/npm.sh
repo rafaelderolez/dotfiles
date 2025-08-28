@@ -13,12 +13,8 @@ pnpm i -g @antfu/ni
 pnpm i -g diff-so-fancy
 pnpm i -g fast-cli
 pnpm i -g kill-port
-pnpm i -g nodemon
-pnpm i -g npm-check-updates
 pnpm i -g npmrc
-pnpm i -g sanity
 pnpm i -g trash-cli
 pnpm i -g typescript
-pnpm i -g vercel
-pnpm i -g vtop
+pnpm i -g bashtop
 pnpm i -g wipe-modules

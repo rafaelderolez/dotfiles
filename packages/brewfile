@@ -1,6 +1,5 @@
 tap "1password/tap"
 tap "charmbracelet/tap"
-tap "fsouza/prettierd"
 tap "fwartner/tap"
 tap "getsentry/tools"
 tap "heroku/brew"
@@ -10,9 +9,7 @@ tap "isacikgoz/taps"
 tap "jesseduffield/lazygit"
 tap "khanhas/tap"
 tap "koekeishiya/formulae"
-tap "shopify/shopify"
 tap "vitorgalvao/tiny-scripts"
-tap "wez/wezterm"
 # Run your GitHub Actions locally
 brew "act"
 # Plugin manager for zsh, inspired by oh-my-zsh and vundle
@@ -147,24 +144,14 @@ brew "mkcert"
 brew "mtr"
 # Fast, highly customisable system info script
 brew "neofetch"
-# Small build system for use with gyp or CMake
-brew "ninja"
-# Development kit for the Java programming language
-brew "openjdk"
 # Fast, disk space efficient package manager
 brew "pnpm"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler"
 # Wrapper to colorize and simplify ping's output
 brew "prettyping"
 # Python version management
 brew "pyenv"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
-# Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
 # Search tool like grep and The Silver Searcher
@@ -197,8 +184,6 @@ brew "wifi-password"
 brew "yank"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
-# Download YouTube videos from the command-line
-brew "youtube-dl"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # Shell extension to navigate your filesystem faster
@@ -207,50 +192,22 @@ brew "zoxide"
 brew "zplug"
 # UNIX shell (command interpreter)
 brew "zsh"
-# AI on the command line
-brew "charmbracelet/tap/mods"
-# 🗑️ cleanup script for macos
-brew "fwartner/tap/mac-cleanup"
-# Sentry command-line client for some generic tasks
-brew "getsentry/tools/sentry-cli"
-# Everything you need to get started with Heroku
-brew "heroku/brew/heroku"
-# fast and interactive tldr client written with go
-brew "isacikgoz/taps/tldr"
 # A simple terminal UI for git commands, written in Go
 brew "jesseduffield/lazygit/lazygit"
-# A CLI tool to build for the Shopify platform
-brew "shopify/shopify/shopify-cli"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
 # Status bar app to overcome time-constrained WiFi networks
 cask "airpass"
-# GPU-accelerated terminal emulator
-cask "alacritty"
-# Automatic tiling window manager similar to xmonad
-cask "amethyst"
-# Chromium based browser
-cask "arc"
 # Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
-# Web browser focusing on privacy
-cask "brave-browser"
-# Free and open-source web browser
-cask "chromium"
 # Visually compare and merge files
 cask "diffmerge"
 # Voice and text chat software
 cask "discord"
 # Collaborative team software
 cask "figma"
-# Web browser
-cask "firefox"
-# Developer targeted fonts with a high number of glyphs
-cask "font-geist-mono-nerd-font"
-# Developer targeted fonts with a high number of glyphs
-cask "font-hack-nerd-font"
 # Client for the Google Drive storage service
 cask "google-drive"
 # GraphQL IDE for better development workflows
@@ -261,10 +218,6 @@ cask "handbrake"
 cask "imageoptim"
 # Menu bar manager
 cask "jordanbaird-ice"
-# Spot and merge differences in text and image files or folders
-cask "kaleidoscope"
-# Open-source screen recorder built with web technology
-cask "kap"
 # Keyboard customiser
 cask "karabiner-elements"
 # App to manage software development and track bugs
@@ -277,8 +230,6 @@ cask "notion-calendar"
 cask "rar"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Font manager that helps preview, install, sync and manage fonts
-cask "rightfont"
 # Instant messaging application focusing on security
 cask "signal"
 # Team communication and collaboration software
@@ -295,17 +246,7 @@ cask "transmission"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "EasyRes", id: 688211836
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Spark", id: 1176895641
-mas "Xcode", id: 497799835
