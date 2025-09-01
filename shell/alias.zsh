@@ -1,7 +1,7 @@
 # dirs
 alias DL="cd $HOME/Downloads"
 alias H="cd $HOME"
-alias C="cd $HOME/Code"
+alias C="cd $HOME/code"
 
 # commands
 alias dot="$DOTFILES/scripts/menu.sh"
@@ -14,12 +14,6 @@ alias fast="fast --upload"
 alias squoosh="squoosh-cli"
 alias zperf="/usr/bin/time zsh -i -c exit"
 alias lg="lazygit"
-alias commit-raycast="git diff --cached | pbcopy; open raycast://ai-commands/git-commit-message && git commit"
-
-# npm (aside from @antfu/ni's aliases)
-alias nt="npm test"
-alias ns="npm start"
-alias nw="npm run watch"
 
 alias j=__zoxide_z
 alias ji=__zoxide_zi

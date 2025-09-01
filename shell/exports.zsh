@@ -8,6 +8,4 @@ export NVM_AUTO_USE=true
 export VISUAL="nvim"
 # Set config dir
 export XDG_CONFIG_HOME="$HOME/.config"
-# https://github.com/MordechaiHadad/bob
-export PATH="/Users/raf/.local/share/bob/nvim-bin:/Users/raf/.cargo/bin:$PATH"
 export SSH_AUTH_SOCK=~/.1password/agent.sock

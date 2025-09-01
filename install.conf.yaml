@@ -26,6 +26,8 @@
     ~/.config/starship.toml: configs/starship.toml
     ~/.config/lazygit: configs/lazygit
     ~/.config/karabiner: configs/karabiner
+    ~/.config/nvim: configs/nvim
+    ~/.aerospace.toml: configs/aerospace.toml
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
