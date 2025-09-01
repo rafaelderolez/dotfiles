@@ -1,15 +1,5 @@
 tap "1password/tap"
-tap "charmbracelet/tap"
-tap "fwartner/tap"
-tap "getsentry/tools"
-tap "heroku/brew"
-tap "homebrew/bundle"
-tap "homebrew/services"
-tap "isacikgoz/taps"
 tap "jesseduffield/lazygit"
-tap "khanhas/tap"
-tap "koekeishiya/formulae"
-tap "vitorgalvao/tiny-scripts"
 # Run your GitHub Actions locally
 brew "act"
 # Plugin manager for zsh, inspired by oh-my-zsh and vundle
