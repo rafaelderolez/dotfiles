@@ -27,7 +27,8 @@
     ~/.config/lazygit: configs/lazygit
     ~/.config/karabiner: configs/karabiner
     ~/.config/nvim: configs/nvim
-    ~/.aerospace.toml: configs/aerospace.toml
+    # ~/.aerospace.toml: configs/aerospace.toml
+    ~/.config/tmux: configs/tmux
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
