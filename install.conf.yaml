@@ -29,6 +29,9 @@
     ~/.config/nvim: configs/nvim
     # ~/.aerospace.toml: configs/aerospace.toml
     ~/.config/tmux: configs/tmux
+    ~/.config/tmuxinator: configs/tmuxinator
+    ~/.config/sesh: configs/sesh
+    ~/.config/ghostty: configs/ghostty
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
