@@ -1,0 +1,77 @@
+# vim: filetype=ini
+# -----------------------------------------------------------------------------
+# General
+# -----------------------------------------------------------------------------
+confirm-close-surface = false
+
+# -----------------------------------------------------------------------------
+# Theme & UI
+# -----------------------------------------------------------------------------
+theme = "TokyoNight Moon"
+macos-titlebar-style = "hidden"
+window-padding-x = 0
+window-padding-y = 0
+
+# -----------------------------------------------------------------------------
+# Fonts
+# -----------------------------------------------------------------------------
+font-family = "GeistMono Nerd Font Mono"
+font-size = 16
+# font-variation-bold = "wght=500"
+# adjust-cell-width = "-10%"
+# font-thicken = 1
+
+# -----------------------------------------------------------------------------
+# Keybindings
+# -----------------------------------------------------------------------------
+# Use the macOS Option key as Alt
+macos-option-as-alt = true
+
+# Unbind some defaults
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+
+# Dotfiles
+keybind = cmd+.=text:\x02d
+
+# Project picker
+keybind = cmd+p=text:\x02P
+
+# Yazi
+keybind = cmd+o=text:\x02o
+
+# New tmux Tab
+keybind = cmd+t=text:\x02c
+
+# Close tmux window
+keybind = cmd+w=text:\x02&
+
+# Close tmux pane
+keybind = cmd+x=text:\x02x
+
+# Sesh
+keybind = cmd+k=text:\x02s
+
+# Last Tmux Session
+keybind = cmd+s=text:\x02L
+
+# Reload tmux config
+keybind = cmd+shift+r=text:\x02.
+
+# Rename window
+keybind = cmd+r=text:\x02r
+
+# Tmux tab switching
+keybind = cmd+digit1=text:\x021
+keybind = cmd+digit2=text:\x022
+keybind = cmd+digit3=text:\x023
+keybind = cmd+digit4=text:\x024
+keybind = cmd+digit5=text:\x025
+keybind = cmd+digit6=text:\x026
+keybind = cmd+digit7=text:\x027
+keybind = cmd+digit8=text:\x028
+keybind = cmd+digit9=text:\x029
+
+# Tmux pane switching
+keybind = cmd+h=text:\x02p
+keybind = cmd+l=text:\x02n
