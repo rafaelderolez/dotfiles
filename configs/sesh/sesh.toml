@@ -1,0 +1,10 @@
+[[session]]
+name = "Downloads 📥"
+path = "~/Downloads"
+startup_command = "ls"
+
+[[session]]
+name = "Dotfiles"
+path = "~/.dotfiles"
+startup_command = "nvim"
+preview_command = "git -C ~/.dotfiles status --short"
