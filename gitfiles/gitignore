@@ -2,3 +2,5 @@
 
 node_modules
 
+## Tmux
+configs/tmux/plugins/
