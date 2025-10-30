@@ -3,6 +3,7 @@
 return {
   {
     "mikavilpas/yazi.nvim",
+    lazy = false,
     opts = {
       integrations = {
         picker_add_copy_relative_path_action = "snacks.picker",
