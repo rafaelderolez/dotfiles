@@ -4,13 +4,27 @@
 # -----------------------------------------------------------------------------
 confirm-close-surface = false
 
+# don't show an overlay when resizing a window
+resize-overlay = never
+
+window-theme = auto
+
 # -----------------------------------------------------------------------------
 # Theme & UI
 # -----------------------------------------------------------------------------
-theme = "TokyoNight Moon"
-macos-titlebar-style = "hidden"
+theme = light:TokyoNight Day,dark:TokyoNight Moon
 window-padding-x = 0
 window-padding-y = 0
+
+macos-titlebar-style = tabs
+auto-update-channel = tip
+bell-features = border
+
+unfocused-split-opacity = 0.95
+mouse-hide-while-typing = true
+cursor-style-blink = false
+cursor-style = block
+adjust-cursor-thickness = 300%
 
 # -----------------------------------------------------------------------------
 # Fonts
@@ -31,47 +45,12 @@ macos-option-as-alt = true
 keybind = alt+left=unbind
 keybind = alt+right=unbind
 
-# Dotfiles
-keybind = cmd+.=text:\x02d
-
-# Project picker
-keybind = cmd+p=text:\x02P
-
-# Yazi
-keybind = cmd+o=text:\x02o
-
-# New tmux Tab
-keybind = cmd+t=text:\x02c
-
-# Close tmux window
-keybind = cmd+w=text:\x02&
-
-# Close tmux pane
-keybind = cmd+x=text:\x02x
-
 # Sesh
-keybind = cmd+k=text:\x02s
+# keybind = cmd+k=text:\x02s
 
-# Last Tmux Session
-keybind = cmd+s=text:\x02L
+# Claude Code shift+enter support
+# keybind = shift+enter=text:\n
 
-# Reload tmux config
-keybind = cmd+shift+r=text:\x02.
-
-# Rename window
-keybind = cmd+r=text:\x02r
-
-# Tmux tab switching
-keybind = cmd+digit1=text:\x021
-keybind = cmd+digit2=text:\x022
-keybind = cmd+digit3=text:\x023
-keybind = cmd+digit4=text:\x024
-keybind = cmd+digit5=text:\x025
-keybind = cmd+digit6=text:\x026
-keybind = cmd+digit7=text:\x027
-keybind = cmd+digit8=text:\x028
-keybind = cmd+digit9=text:\x029
-
-# Tmux pane switching
-keybind = cmd+h=text:\x02p
-keybind = cmd+l=text:\x02n
+# Navigate tabs
+keybind = cmd+h=previous_tab
+keybind = cmd+l=next_tab
