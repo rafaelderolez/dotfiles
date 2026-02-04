@@ -1,7 +1,7 @@
 local baseConfig = {
   updateImportsOnFileMove = { enabled = "always" },
   suggest = {
-    completeFunctionCalls = true,
+    completeFunctionCalls = false,
   },
   preferences = {
     quoteStyle = "double",
