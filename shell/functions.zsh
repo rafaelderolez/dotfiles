@@ -12,14 +12,28 @@ claude() {
         # Get git root directory
         git_root=$(git rev-parse --show-toplevel)
         current_dir=$(pwd)
-        
+
         # If not in git root, navigate there
         if [[ "$git_root" != "$current_dir" ]]; then
             cd "$git_root"
             echo "Navigated to git root: $git_root"
         fi
     fi
-    
+
     # Call the original claude command
     command claude "$@"
 }
+
+# Set terminal title to git root name or current directory
+precmd_set_title() {
+    local git_root
+    git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+    if [[ -n "$git_root" ]]; then
+        print -Pn "\e]0;$(basename "$git_root")\a"
+    else
+        print -Pn "\e]0;%~\a"
+    fi
+}
+
+# Add to precmd hooks (runs before each prompt)
+add-zsh-hook precmd precmd_set_title

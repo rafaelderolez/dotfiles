@@ -1,4 +1,9 @@
 # ================================================================================ #
+# Profiling (uncomment to debug slow startup)
+# ================================================================================ #
+# zmodload zsh/zprof
+
+# ================================================================================ #
 # Config
 # ================================================================================ #
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -6,8 +11,16 @@ ZSH_TAB_TITLE_ONLY_FOLDER=true
 ZSH_TAB_TITLE_CONCAT_FOLDER_PROCESS=true
 DISABLE_AUTO_TITLE="true"
 
-# Case insensitve autocomplete
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# Load zsh hooks
+autoload -Uz add-zsh-hook
+
+# Better completion
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' rehash true
 # Turn on correction suggestions
 unsetopt correct_all
 setopt correct
@@ -23,19 +36,28 @@ source $DOTFILES/shell/alias.zsh
 source $DOTFILES/shell/exports.zsh
 source $DOTFILES/shell/functions.zsh
 
-# Zoxide
-eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
+# Zoxide - cached init for performance
+if command -v zoxide &> /dev/null; then
+  _zoxide_cache="$HOME/.cache/zoxide_init.zsh"
+  if [[ ! -f "$_zoxide_cache" ]] || [[ $(which zoxide) -nt "$_zoxide_cache" ]]; then
+    mkdir -p "$HOME/.cache"
+    zoxide init zsh > "$_zoxide_cache"
+  fi
+  source "$_zoxide_cache"
+fi
 
-eval "$(pyenv init --path)"
+# Starship - cached init for performance
+if command -v starship &> /dev/null; then
+  _starship_cache="$HOME/.cache/starship_init.zsh"
+  if [[ ! -f "$_starship_cache" ]] || [[ $(which starship) -nt "$_starship_cache" ]]; then
+    mkdir -p "$HOME/.cache"
+    starship init zsh > "$_starship_cache"
+  fi
+  source "$_starship_cache"
+fi
 
+# FZF - with error handling
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-# Make all bins executable
-chmod +x $DOTFILES/bin/*
-# Add bin to PATH
-export PATH=$PATH:$DOTFILES/bin
 
 # tabtab source for packages
 # uninstall by removing these lines
@@ -43,13 +65,30 @@ export PATH=$PATH:$DOTFILES/bin
 
 # pnpm
 export PNPM_HOME="/Users/rafaelderolez/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-#
+pathadd "$PNPM_HOME"
 
-export PATH="$HOME/.local/bin:$PATH"
+# Fast Node Manager - cached init for performance
+FNM_PATH="/opt/homebrew/opt/fnm/bin"
+if [ -d "$FNM_PATH" ]; then
+  _fnm_cache="$HOME/.cache/fnm_init.zsh"
+  if [[ ! -f "$_fnm_cache" ]] || [[ /opt/homebrew/bin/fnm -nt "$_fnm_cache" ]]; then
+    mkdir -p "$HOME/.cache"
+    fnm env --use-on-cd --shell zsh > "$_fnm_cache"
+  fi
+  source "$_fnm_cache"
+fi
 
-[ -z "$TMUX" ] && { tmux ls >/dev/null 2>&1 && exec tmux attach || exec tmux; }
+# OpenClaw Completion - cached for performance
+if command -v openclaw &> /dev/null; then
+  _openclaw_cache="$HOME/.cache/openclaw_completion.zsh"
+  if [[ ! -f "$_openclaw_cache" ]] || [[ $(which openclaw) -nt "$_openclaw_cache" ]]; then
+    mkdir -p "$HOME/.cache"
+    openclaw completion --shell zsh > "$_openclaw_cache"
+  fi
+  source "$_openclaw_cache"
+fi
+
+# ================================================================================ #
+# End Profiling (uncomment to debug slow startup)
+# ================================================================================ #
+# zprof

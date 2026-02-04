@@ -11,9 +11,8 @@ alias ping="prettyping --nolegend"
 alias r="exec zsh"
 alias rm="trash"
 alias fast="fast --upload"
-alias squoosh="squoosh-cli"
-alias zperf="/usr/bin/time zsh -i -c exit"
 alias lg="lazygit"
+alias cc="claude --dangerously-skip-permissions"
 
 alias j=__zoxide_z
 alias ji=__zoxide_zi
