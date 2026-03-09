@@ -1,10 +1,10 @@
-[[session]]
-name = "Downloads 📥"
-path = "~/Downloads"
-startup_command = "ls"
+sort_order = [
+    "tmuxinator",
+    "config",
+    "tmux",
+    "zoxide",
+]
 
 [[session]]
-name = "Dotfiles"
-path = "~/.dotfiles"
-startup_command = "nvim"
-preview_command = "git -C ~/.dotfiles status --short"
+name = "Default"
+path = "~"

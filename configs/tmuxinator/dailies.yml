@@ -1,0 +1,12 @@
+name: dailies
+root: ~/code/dailies
+windows:
+  - claude:
+      panes:
+        - claude -c --dangerously-skip-permissions
+  - dev:
+      panes:
+        - nr dev
+  - editor:
+      panes:
+        - nvim

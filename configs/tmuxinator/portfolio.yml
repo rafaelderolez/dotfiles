@@ -1,0 +1,14 @@
+name: portfolio
+root: ~/code/portfolio-2024
+windows:
+  - claude:
+      panes:
+        - claude -c --dangerously-skip-permissions
+  - cli:
+      layout: even-horizontal
+      panes:
+        - nr dev
+        - 'ls'
+  - editor:
+      panes:
+        - nvim

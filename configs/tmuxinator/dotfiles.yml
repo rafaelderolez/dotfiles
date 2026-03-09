@@ -1,0 +1,9 @@
+name: dotfiles
+root: ~/.dotfiles
+windows:
+  - claude:
+      panes:
+        - claude -c --dangerously-skip-permissions
+  - editor:
+      panes:
+        - nvim

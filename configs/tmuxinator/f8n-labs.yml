@@ -1,0 +1,12 @@
+name: f8n labs
+root: ~/code/labs
+windows:
+  - claude:
+      panes:
+        - claude -c --dangerously-skip-permissions
+  - dev:
+      panes:
+        - bun run dev
+  - editor:
+      panes:
+        - nvim

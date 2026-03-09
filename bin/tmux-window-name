@@ -1,0 +1,15 @@
+#!/bin/sh
+path="${1%/}"
+process="$2"
+dir=$(basename "$path")
+repo_root=$(git -C "$path" rev-parse --show-toplevel 2>/dev/null)
+if [ -n "$repo_root" ]; then
+  repo_name=$(basename "$repo_root")
+  if [ "$path" = "$repo_root" ]; then
+    printf '%s/%s' "$repo_name" "$process"
+  else
+    printf '%s/%s/%s' "$repo_name" "$dir" "$process"
+  fi
+else
+  printf '%s/%s' "$dir" "$process"
+fi

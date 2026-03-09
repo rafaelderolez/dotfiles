@@ -16,7 +16,8 @@ theme = light:TokyoNight Day,dark:TokyoNight Moon
 window-padding-x = 0
 window-padding-y = 0
 
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
+window-decoration = false
 auto-update-channel = tip
 bell-features = border
 
@@ -44,13 +45,20 @@ macos-option-as-alt = true
 # Unbind some defaults
 keybind = alt+left=unbind
 keybind = alt+right=unbind
+keybind = ctrl+space=unbind
 
-# Sesh
-# keybind = cmd+k=text:\x02s
+# Tmux window management (C-Space prefix = \x00)
+keybind = cmd+t=text:\x00c
+keybind = cmd+w=text:\x00x
+keybind = cmd+r=text:\x00r
 
-# Claude Code shift+enter support
-# keybind = shift+enter=text:\n
+# Tmux session management
+keybind = cmd+k=text:\x00T
+keybind = cmd+s=text:\x00L
 
-# Navigate tabs
-keybind = cmd+h=previous_tab
-keybind = cmd+l=next_tab
+# Claude AI pane
+keybind = cmd+a=text:\x00a
+
+# Reload tmux config
+keybind = cmd+shift+r=text:\x00.
+
